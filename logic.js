@@ -1,21 +1,20 @@
 var GlobeOpt = function() {
-    this.lon0 = 20;
-    this.lat0 = 35;
-    this.lat1 = 30;
-    this.lat2 = 50;
-    this.dist = 2;
-    this.up = 0;
-    this.tilt = 0;
-    this.proj = 'ortho';
-    this.projstr = '+proj=lcc +lat_1=44.1 +lat_0=44.1 +lon_0=0 +k_0=0.999877499 +x_0=600000 +y_0=200000 +a=6378249.2 +b=6356515 +towgs84=-168,-60,320,0,0,0,0 +pm=paris +units=m',
-    //this.flip = 0;
-    this.offsetx = 0;
-    this.offsety = 0;
-    this.startx = 0;
-    this.starty = 0;
-    this.deltalon = 0;
-    this.deltalat = 0;
-    this.isdragged = false;
+    this.lon0       = 20;
+    this.lat0       = 35;
+    this.lat1       = 30;
+    this.lat2       = 50;
+    this.dist       = 2;
+    this.up         = 0;
+    this.tilt       = 0;
+    this.proj       = 'ortho';
+    this.projstr    = '+proj=lcc +lat_1=44.1 +lat_0=44.1 +lon_0=0 +k_0=0.999877499 +x_0=600000 +y_0=200000 +a=6378249.2 +b=6356515 +towgs84=-168,-60,320,0,0,0,0 +pm=paris +units=m',
+    this.offsetx    = 0;
+    this.offsety    = 0;
+    this.startx     = 0;
+    this.starty     = 0;
+    this.deltalon   = 0;
+    this.deltalat   = 0;
+    this.isdragged  = false;
     this.firstclick = true;
 };
 
@@ -47,14 +46,14 @@ $(function() {
         };
         var
         lon, lat, i,
-        w = $('#map-parent').width(),
-        h = 600,
+        w    = $('#map-parent').width(),
+        h    = 600,
         grat = 15,
-        sea = P.sea(),
+        sea  = P.sea(),
         bbox = P.world_bbox(),
         view,
-        ctx = createCanvas("proj", w,h+20),
-        len = ctx.measureText(p.toUpperCase()).width;
+        ctx  = createCanvas("proj", w,h+20),
+        len  = ctx.measureText(p.toUpperCase()).width;
         ctx.beginPath();
         ctx.fillStyle ="#fff";
         view = new kartograph.View(bbox, w, h, 10);
@@ -100,7 +99,7 @@ $(function() {
                 for (var i=0;i<line.length-1;i++) {
                     p0 = line[i];
                     p1 = line[i+1];
-                    d = P.clon ? Math.abs(P.clon(p0[0])-P.clon(p1[0])) : 0;
+                    d  = P.clon ? Math.abs(P.clon(p0[0])-P.clon(p1[0])) : 0;
                     if (P._visible(p0[0],p0[1]) && P._visible(p1[0],p1[1]) && d < 100) {
                         p0 = view.project(P.project(p0[0],p0[1]));
                         p1 = view.project(P.project(p1[0],p1[1]));
@@ -140,8 +139,12 @@ $(function() {
         renderFrame();
     });
 
-    $.getJSON('https://raw.githubusercontent.com/Sephka/project2/jiwin/distillery.json?token=AM3DGKAKF2WR45GV73QNRV26BAJ3A', function(locations) {
-        $.each()
+    $.getJSON('https://github.com/Sephka/project2/raw/jiwin/distillery.json', function(locations) {
+
+
+        renderFrame();
+    });
+
 
     //     proj.addSymbols({
     //         type: Kartograph.Bubble,
@@ -172,19 +175,6 @@ $(function() {
     //         sortBy: 'radius desc',
     //         style: 'fill:#800; stroke: #fff; fill-opacity: 0.5;',
     //     });
-    // });
-    // function locations('data/distillery.json') {
-    //     var total = 0;
-    //     $.each(cities, function(i, city) {
-    //         total += city.visits;
-    //     });
-    //     return { visits: total };
-    // }
-    
-
-
-    // $.getJSON('data/distillery.json', function(locations) {
-    //     $.each()
     // });
 
     window.gui = new dat.GUI({ 
@@ -227,9 +217,9 @@ $(function() {
                 s.onChange(renderFrame);
             }
         });
-        $('#k-proj-title').html(kartograph.proj[globeopt.proj].title);
-        var url = location.href.split('#');
-        location.href = url[0]+'#'+globeopt.proj;
+        // $('#k-proj-title').html(kartograph.proj[globeopt.proj].title);
+        // var url = location.href.split('#');
+        // location.href = url[0]+'#'+globeopt.proj;
     };
     updateGUI();
     $('#map-parent').click(function (e) {
@@ -246,8 +236,8 @@ $(function() {
     });
     var latstart = 0,
         lonstart = 0,
-        lastlat = 0,
-        lastlon = 0;
+        lastlat  = 0,
+        lastlon  = 0;
     $('#map-parent').mousemove(function (e) {
         globeopt.offsetx = this.offsetLeft;
         globeopt.offsety = this.offsetTop;
