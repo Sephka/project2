@@ -1,10 +1,3 @@
-
-// var distilleryLocations = new L.LayerGroup(); 
-
-d3.csv("data/Distillery.csv").then(function(distilleryData) {
-    
-}); 
-
 var GlobeOpt = function() {
     this.lon0 = 20;
     this.lat0 = 35;
@@ -25,6 +18,7 @@ var GlobeOpt = function() {
     this.isdragged = false;
     this.firstclick = true;
 };
+
 var globeopt = new GlobeOpt();
 var url = location.href.split('#');
 if (url.length>1) globeopt.proj = url[1];
@@ -141,10 +135,58 @@ $(function() {
         showMap(globeopt.proj, coastlines);
         // Iterate over all controllers
     };
-    $.getJSON('https://github.com/kartograph/kartograph.org/blob/master/showcase/projections/coastline.json', function(coastlines) {
-            window.coastlines = coastlines;
-            renderFrame();
+    $.getJSON('https://raw.githubusercontent.com/kartograph/kartograph.org/master/showcase/projections/coastline.json', function(coastlines) {
+        window.coastlines = coastlines;
+        renderFrame();
     });
+
+    $.getJSON('https://raw.githubusercontent.com/Sephka/project2/jiwin/distillery.json?token=AM3DGKAKF2WR45GV73QNRV26BAJ3A', function(locations) {
+        $.each()
+
+    //     proj.addSymbols({
+    //         type: Kartograph.Bubble,
+    //         data: cities,
+    //         clustering: 'k-means',
+    //         location: function(city) { return [city.lon, city.lat]; },
+    //         radius: function(d) { return Math.sqrt(city.nb_visits); },
+    //         // name of clustering technique
+    //         // aggregation function
+    //         aggregate: function(cities) {
+    //             var nc = { nb_visits: 0, city_names: [] };
+    //             $.each(cities, function(i, c) {
+    //                 nc.nb_visits += c.nb_visits;
+    //                 nc.city_names = nc.city_names.concat(c.city_names ? c.city_names : [c.city_name]);
+    //             });
+    //             nc.city_name = nc.city_names[0] + ' and ' + (nc.city_names.length-1) + ' others';
+    //             return nc;
+    //         },
+    //         location: function(city) {
+    //             return [city.long, city.lat];
+    //         },
+    //         radius: function(city) {
+    //             return scale(city.nb_visits);
+    //         },
+    //         tooltip: function(city) {
+    //             return '<h3>'+city.city_name+'</h3>'+city.nb_visits+' visits';
+    //         },
+    //         sortBy: 'radius desc',
+    //         style: 'fill:#800; stroke: #fff; fill-opacity: 0.5;',
+    //     });
+    // });
+    // function locations('data/distillery.json') {
+    //     var total = 0;
+    //     $.each(cities, function(i, city) {
+    //         total += city.visits;
+    //     });
+    //     return { visits: total };
+    // }
+    
+
+
+    // $.getJSON('data/distillery.json', function(locations) {
+    //     $.each()
+    // });
+
     window.gui = new dat.GUI({ 
         autoPlace: false,
         width: 330,
@@ -169,7 +211,6 @@ $(function() {
         projstr: 'str'
     };
     var updateGUI = function() {
-        // reset gui
         try {
             for (var i=gui.__controllers.length-1; i>=0; i--) {
                 gui.remove(gui.__controllers[i]);
@@ -232,7 +273,7 @@ $(function() {
             if (globeopt.lat0 < -90) {globeopt.lat0 = -90; }
             gui.__controllers[1].updateDisplay();
             gui.__controllers[2].updateDisplay();
-            //$('#relxystatus').html(globeopt.deltalat +'Â°'+ globeopt.deltalon + 'Â°');
+            // $('#relxystatus').html(globeopt.deltalat +'Â°'+ globeopt.deltalon + 'Â°');
             $('#latlonstatus').html((Math.floor(globeopt.lat0)) + 'Â°, ' + (Math.floor(globeopt.lon0)) + 'Â°');
             if (globeopt.lat0 !== lastlat || globeopt.lon0 !== lastlon) {
                 renderFrame();
