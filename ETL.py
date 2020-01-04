@@ -19,7 +19,7 @@ new_brand_data_df = brand_data_df[['Brand', 'Country', 'Whiskies', 'Votes', 'Rat
 new_brand_data_df = new_brand_data_df.dropna(how="any")
 
 # Create SQL Engine
-connection_string = "postgres:konpaku9@localhost:5432/project-2"
+connection_string = "postgres:password@localhost:5432/project-2"
 engine = create_engine(f'postgresql://{connection_string}')
 print(connection_string)
 
