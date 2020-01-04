@@ -7,7 +7,7 @@ csv_file = "./data/Distillery.csv"
 distillery_data_df = pd.read_csv(csv_file)
 
 # Create a distillery dataframe, keeping only the columns desired
-new_distillery_data_df = distillery_data_df[['Company', 'Country', 'Founded', 'Closed', 'Views', 'Ranking', 'Votes', 'Wishlist', 'Rating', 'Whisky', 'Collection', 'lon', 'lat']].copy()
+new_distillery_data_df = distillery_data_df[['Company', 'Country', 'Rating', 'Whisky', 'Collection', 'lon', 'lat']].copy()
 new_distillery_data_df = new_distillery_data_df.dropna(how="any")
 
 # Load the Whisky Brand .csv file
