@@ -139,21 +139,13 @@ $(function() {
         renderFrame();
     });
 
-    $.getJSON('https://github.com/Sephka/project2/raw/jiwin/distillery.json', function(locations) {
-
-
-        renderFrame();
-    });
-
-
-    //     proj.addSymbols({
-    //         type: Kartograph.Bubble,
-    //         data: cities,
+    // $.getJSON('distillery.json', function(locations) {
+    //     map.addSymbols({
+    //         type: kartograph.Bubble,
+    //         data: 'distillery.json',
     //         clustering: 'k-means',
-    //         location: function(city) { return [city.lon, city.lat]; },
+    //         location: function(locations) { return [locations.lon, locations.lat]; },
     //         radius: function(d) { return Math.sqrt(city.nb_visits); },
-    //         // name of clustering technique
-    //         // aggregation function
     //         aggregate: function(cities) {
     //             var nc = { nb_visits: 0, city_names: [] };
     //             $.each(cities, function(i, c) {
@@ -175,7 +167,17 @@ $(function() {
     //         sortBy: 'radius desc',
     //         style: 'fill:#800; stroke: #fff; fill-opacity: 0.5;',
     //     });
+
+    //     renderFrame();
     // });
+
+    $.getJSON('distillery.json', function(locations) {
+        window.locations = locations; 
+        // locations.forEach(obj => {
+        //     Object.entries(obj).forEach([key, value]); 
+        // })
+        console.log(); 
+    });
 
     window.gui = new dat.GUI({ 
         autoPlace: false,
