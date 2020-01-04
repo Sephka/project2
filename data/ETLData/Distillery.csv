@@ -1,0 +1,882 @@
+index,Company,Country,Rating,Whisky,Collection,lon,lat
+0,'t Koelschip,Netherlands,32.63,8,18,5,52
+1,10th Mountain,United States,0.00,2,2,-106,40
+2,2bar Spirits,United States,73.67,3,3,-122,48
+3,3 Badge Beverage,United States,84.40,10,65,-122,38
+6,66 Gilead Distillery,Canada,81.00,2,11,-77,44
+7,66 Gilead Distillery,Canada,81.00,2,11,-77,44
+8,A. Smith Bowman,United States,82.89,23,113,-77,38
+10,Acha,Spain,77.00,1,1,-3,43
+11,Adirondack Distilling Co.,United States,0.00,3,1,-75,43
+12,Adnams,United Kingdom,74.65,8,76,2,52
+16,Agárdi Pálinkafőzde,Hungary,80.67,1,6,19,47
+17,Agder Brenneri,Norway,64.61,3,49,9,58
+18,Aichinger,Austria,74.76,5,56,15,48
+19,Aichinger,Austria,74.76,5,56,15,48
+20,Aichinger,Austria,74.76,5,56,15,48
+21,Aioi Unibio Co. Ltd.,Japan,79.00,1,4,137,35
+22,Akkeshi Distillery,Japan,75.75,2,13,145,43
+23,Alambik,Netherlands,76.32,3,29,7,53
+24,Alaska Distillery,United States,55.00,2,5,-149,62
+26,Alberta Distillers Ltd.,Canada,83.61,37,407,-114,51
+27,Alde Gott,Germany,84.60,2,8,8,49
+29,Allgäu-Brennerei Günther GmbH,Germany,63.17,4,9,10,48
+30,Alpenwhisky-Destillerie,Austria,84.33,11,9,10,47
+31,Alpirsbacher Klosterbräu ,Germany,83.00,1,4,8,48
+32,Alt Enderle,Germany,83.66,17,61,9,49
+33,Alte Brennerei,Switzerland,72.00,1,3,8,47
+34,Alte Hausbrennerei A. Wecklein,Germany,66.75,4,6,10,50
+35,Altore,France,64.63,2,12,2,46
+36,Altore,France,64.63,2,12,2,46
+37,Altore,France,64.63,2,12,2,46
+38,Amador Distillery,United States,85.00,5,7,-121,38
+39,Amrut,India,85.06,316,7365,79,21
+40,Amrut,India,85.06,316,7365,79,21
+41,Amrut,India,85.06,316,7365,79,21
+42,Anchor Distilling Company,United States,84.00,19,105,-122,38
+45,Archie Rose Distilling Co.,Australia,0.00,1,1,151,-34
+46,Arcus,Norway,78.13,5,25,11,60
+47,Arizona High Spirits Distillery,United States,72.00,1,1,-112,35
+48,Arnsteiner Brauerei,Germany,0.00,1,2,10,50
+49,Asaka,Japan,87.00,11,55,140,37
+50,Ascendant Spirits,United States,86.00,4,4,-120,35
+51,Asheville Distilling Co.,United States,50.00,5,5,-82,36
+52,Astidama,Indonesia,71.00,3,8,115,-9
+53,ASW,United States,0.00,2,2,-84,34
+56,Augustus Rex,Germany,0.00,1,4,14,51
+58,Authentic Seacoast Distilling Co. Ltd.,Canada,72.00,2,1,-62,45
+59,Avadis Distillery,Germany,70.09,23,53,6,50
+61,bachgau-Destille,Germany,58.50,6,12,9,50
+62,Badmils Black Distillery,Austria,84.00,1,1,12,47
+63,Bainbridge,United States,0.00,2,4,-123,48
+64,Bakery Hill Distillery,Australia,81.70,11,50,145,-38
+65,Balcones Distilling,United States,80.22,54,386,-97,32
+66,Ballast Point,United States,0.00,4,4,-117,33
+69,Bardstown Bourbon Company,United States,79.00,2,3,-85,38
+71,Barrell Craft Spirits,United States,85.99,39,117,-86,38
+72,Barton 1792 Distillery,United States,83.60,55,437,-85,38
+73,Basilico France,France,78.50,4,5,6,45
+74,Békési Manufaktúra,Hungary,57.34,3,21,21,47
+75,Belgrove,Australia,86.00,3,3,147,-43
+78,Belmont Farm Distillery,United States,50.00,6,14,-78,38
+79,Bendistillery,United States,76.00,3,1,-121,44
+81,Berkshire Mountain Distillers,United States,82.00,6,8,-73,42
+82,Bernheim,United States,85.06,25,425,-86,38
+83,Bertrand,France,78.54,18,64,1,48
+84,BFLO Distilling Company,United States,0.00,2,1,-79,43
+85,Bières Michard,France,77.00,2,3,1,46
+86,Bieri Brennerei Bauernhof,Switzerland,79.60,11,40,9,47
+87,Bieri Brennerei Bauernhof,Switzerland,79.60,11,40,9,47
+88,Big Bottom Distilling,United States,82.38,15,27,-123,46
+89,Bimber Distillery,United Kingdom,77.50,8,4,0,52
+90,Birgitta Rust - Piekfeine Brände e.K.,Germany,71.63,7,21,9,53
+91,Birkenhof-Brennerei GmbH,Germany,77.92,20,107,8,51
+93,Black Canyon Distillery,United States,0.00,1,2,-105,40
+94,Black Dirt Distillery,United States,79.00,18,6,-74,41
+95,Black Gate Distillery,Australia,0.00,5,3,149,-32
+96,Black Heron Spirits,United States,0.00,2,1,-119,46
+98,Blaue Maus,Germany,73.68,85,159,11,50
+99,Blaum Bros. Distilling Co.,United States,89.00,3,3,-90,42
+101,Blue Ridge Distilling Co.,United States,63.11,2,15,-82,36
+104,Boann Distillery,Ireland,79.00,1,1,-6,54
+105,Böckl,Austria,69.00,4,4,17,48
+106,Bolanachi,Egypt,11.25,3,1,31,27
+107,Bolanachi,Egypt,11.25,3,1,31,27
+109,Boldizar,Germany,72.00,1,2,9,50
+111,Boone County Distilling Co.,United States,75.00,3,5,-85,39
+112,Bosch-Edelbrand,Germany,69.65,4,25,9,49
+113,Boston Harbor Distillery,United States,0.00,3,2,-71,42
+114,Böttchehof,Germany,24.00,2,6,8,48
+115,Bow Street Distillery,Ireland,85.61,47,86,-6,53
+116,Box,Sweden,83.18,99,4105,18,63
+117,Braeckman Distillers,Belgium,88.27,1,40,4,51
+118,Brænderiet Limfjorden,Denmark,0.00,1,2,10,56
+119,Brænderiet Limfjorden,Denmark,0.00,1,2,10,56
+120,Brænderiet Limfjorden,Denmark,0.00,1,2,10,56
+122,Brasserie de Bercloux,France,62.67,6,25,0,46
+123,Brauerei Aare Bier / Old River,Switzerland,72.00,3,2,7,47
+124,Brauerei Baumgartner Tiroler Bier,Austria,78.00,2,2,11,47
+125,Brauerei Falken AG,Switzerland,79.95,8,25,9,48
+126,Brauerei Locher,Switzerland,82.81,196,2229,9,47
+127,Brauerei Monstein,Switzerland,70.21,22,18,10,47
+129,Braugasthof Papiermühle,Germany,75.00,6,12,12,51
+130,Brauhaus am Lohberg zu Wismar,Germany,81.08,4,22,11,54
+131,Braunstein,Denmark,79.36,34,403,12,55
+132,Breckenridge Distillery,United States,83.03,5,55,-106,40
+133,Brenne,France,68.47,5,28,2,46
+134,Brenne,France,68.47,5,28,2,46
+135,Brenne,France,68.47,5,28,2,46
+136,Brennerei & Mosterei Stadelmann,Switzerland,77.20,20,65,8,47
+137,Brennerei Brehmer-Knauer,Germany,0.00,1,1,13,51
+138,Brennerei Druffel,Germany,73.67,5,37,8,52
+139,Brennerei E. & R. Brasch,Germany,65.00,2,2,11,50
+140,Brennerei Ehringhausen,Germany,0.00,1,1,8,52
+141,Brennerei Eiger,Switzerland,84.00,1,3,8,47
+142,Brennerei Feller,Germany,81.31,14,47,10,48
+144,Brennerei Gruel,Germany,72.28,19,68,9,49
+145,Brennerei Henrich,Germany,65.22,13,68,8,50
+146,Brennerei Höck,Austria,60.00,1,2,12,48
+147,Brennerei Höhler,Germany,53.11,22,51,8,50
+148,Brennerei Kramer,Switzerland,78.78,6,13,8,47
+149,Brennerei L. Psenner,Italy,61.33,1,8,9,47
+150,Brennerei Lanz,Switzerland,77.50,1,6,8,47
+151,Brennerei Ludwig Faber,Germany,38.67,1,6,6,50
+152,Brennerei Martin Meier,Germany,64.17,4,4,10,48
+153,Brennerei Mühlenthal,Germany,0.00,1,1,7,49
+155,Brennerei Schwab,Switzerland,80.61,21,21,7,47
+156,Brennerei Volker Theurer im Gasthof Lamm,Germany,73.50,5,8,9,49
+157,Brennerei Wild,Germany,74.33,2,11,8,48
+158,Brennerei Ziegler,Germany,79.23,21,271,9,50
+159,Brennerei Zürcher,Switzerland,80.39,13,27,7,47
+160,Breuckelen Distilling,United States,67.83,4,7,-74,41
+161,Brickway Distillery,United States,0.00,1,1,-96,41
+162,Broad Branch Distillery,United States,0.00,1,2,-80,36
+164,Broger,Austria,60.81,12,19,10,47
+165,Brouwerij de Molen,Netherlands,61.03,2,14,5,52
+166,Brouwerij Wilderen,Belgium,72.66,14,109,5,51
+167,Brouwerij-Stokerij PIRLOT,Belgium,73.41,5,77,5,51
+168,Brown-Forman Distillery,United States,82.32,77,433,-86,38
+169,Bruckners Erz Bräu,Austria,0.00,2,2,15,48
+170,Brûlerie du Revermont,France,74.00,1,3,6,47
+171,Brunschwiler Brennerei,Switzerland,75.50,12,25,9,47
+172,Buffalo Trace Distillery,United States,84.89,894,9938,-85,38
+173,Bull Run Distilling Co.,United States,83.00,4,7,-123,46
+174,Bulleit Distilling Co.,United States,82.27,2,56,-85,38
+175,Bully Boy Distillers,United States,80.00,4,2,-71,42
+176,Burgdorfer,Switzerland,71.83,8,11,8,47
+177,Burger Hofbrennerei,Germany,76.00,1,3,14,52
+178,Bushmills,Ireland,82.81,247,6950,-7,55
+179,C. W. Falckenthal Söhne,Germany,0.00,2,1,13,52
+180,Cadushy Distillery,Netherlands Antilles,65.75,3,9,-72,17
+181,Caldera Distilling,Canada,83.00,2,3,-63,46
+184,Canadian Mist,Canada,58.88,6,13,-80,45
+187,Cascade Hollow Distillery,United States,81.28,65,362,-86,35
+190,Catoctin Creek Distillery,United States,76.77,18,19,-78,39
+191,Catskill Distilling Company,United States,79.42,8,18,-75,42
+192,Cave de la Crausaz,Switzerland,76.00,4,10,6,46
+193,Cedar Ridge Winery & Distillery,United States,83.00,6,12,-92,42
+194,Central City Brewers + Distillers,Canada,77.00,1,4,-123,49
+196,Charbay Distillery & Winery,United States,85.61,9,24,-123,39
+197,Charles Medley Distillery,United States,85.56,15,47,-87,38
+199,Chichibu,Japan,87.41,212,6256,139,36
+200,Chicken Cock Distilleries ,United States,77.00,11,7,-80,33
+201,Chicken Hill,Switzerland,76.75,14,28,9,47
+202,Chicken Hill,Switzerland,76.75,14,28,9,47
+204,Chugoku Jozo ,Japan,80.61,11,545,132,34
+207,Clear Creek Distillery,United States,81.10,16,99,-123,46
+208,Cleveland Whiskey,United States,82.96,22,66,-82,42
+209,Clonakilty Distillery,Ireland,84.42,2,26,-9,52
+210,Coillmór,Germany,70.24,50,143,13,49
+211,Collier and McKeel,United States,72.00,2,1,-87,36
+212,Colorado Gold Distillery,United States,75.00,3,2,-96,37
+213,Colorado Gold Distillery,United States,75.00,3,2,-96,37
+214,Colorado Gold Distillery,United States,75.00,3,2,-96,37
+215,Colorado Gold Distillery,United States,75.00,3,2,-96,37
+216,Colorado Gold Distillery,United States,75.00,3,2,-96,37
+217,Colorado Gold Distillery,United States,75.00,3,2,-96,37
+218,Colorado Gold Distillery,United States,75.00,3,2,-96,37
+219,Colorado Gold Distillery,United States,75.00,3,2,-96,37
+220,Colorado Gold Distillery,United States,75.00,3,2,-96,37
+221,Colorado Gold Distillery,United States,75.00,3,2,-96,37
+222,Colorado Gold Distillery,United States,75.00,3,2,-96,37
+223,Conecuh Ridge Distillery,United States,79.72,9,24,-96,37
+224,Conecuh Ridge Distillery,United States,79.72,9,24,-96,37
+225,Conecuh Ridge Distillery,United States,79.72,9,24,-96,37
+226,Conecuh Ridge Distillery,United States,79.72,9,24,-96,37
+227,Conecuh Ridge Distillery,United States,79.72,9,24,-96,37
+228,Conecuh Ridge Distillery,United States,79.72,9,24,-96,37
+229,Conecuh Ridge Distillery,United States,79.72,9,24,-96,37
+230,Conecuh Ridge Distillery,United States,79.72,9,24,-96,37
+231,Conecuh Ridge Distillery,United States,79.72,9,24,-96,37
+232,Conecuh Ridge Distillery,United States,79.72,9,24,-96,37
+233,Conecuh Ridge Distillery,United States,79.72,9,24,-96,37
+234,Connacht Distillery,Ireland,81.50,7,9,-9,54
+235,Cooley Distillery,Ireland,82.36,381,8247,-6,54
+237,Cooperstown Distillery,United States,72.00,6,3,-75,43
+238,Copper Fox Distillery,United States,65.53,18,119,-78,39
+239,Copper Rivet Distillery,United Kingdom,0.00,1,1,1,51
+240,Copper Run Distillery,United States,0.00,1,1,-93,37
+241,Coppersea Distilling,United States,88.00,4,3,-74,42
+242,Copperworks Distilling Co.,United States,87.00,5,4,-122,48
+243,Corby Spirit and Wine Ltd.,Canada,82.19,30,509,-106,56
+244,Corby Spirit and Wine Ltd.,Canada,82.19,30,509,-106,56
+245,Cornelius Pass Roadhouse Distillery,United States,0.00,1,1,-123,46
+246,Corsair Artisan Distillery,United States,76.99,41,86,-87,36
+247,Cotswolds Distillery,United Kingdom,82.00,21,356,-2,52
+248,Cradle Mountain,Australia,84.26,8,49,146,-41
+249,Craft Distillers,United States,0.00,8,6,-123,39
+251,Cut Spike Distillery,United States,87.00,2,13,-96,41
+253,Dachstein Destillerie Mandlberggut,Austria,60.64,7,27,14,47
+255,Dallas Distilleries Inc.,United States,72.00,3,8,-97,33
+256,Dancing Cows Distillery,United Kingdom,0.00,2,1,-2,51
+257,Dancing Goat Distillery,United States,0.00,1,1,-89,43
+260,Dark Horse,United States,80.00,4,5,-95,39
+262,De Graal,Belgium,71.28,2,28,4,51
+263,De Lepelaar,Netherlands,78.17,5,25,5,53
+264,De Lepelaar,Netherlands,78.17,5,25,5,53
+268,De Tweekoppige Phoenix ,Netherlands,58.00,2,8,-111,34
+269,Death's Door Distillery,United States,74.00,2,2,-90,43
+271,Deerhammer,United States,0.00,3,2,-106,39
+272,Deheck,Germany,81.00,1,1,8,50
+273,Delaware Phoenix Distillery,United States,79.00,5,5,-75,42
+274,Demmel & Cie.,Germany,61.50,2,6,11,52
+275,"Destileria Limtuaco & Co., Inc.",Philippines,21.00,6,5,121,15
+276,"Destilerías Aldea, S.L.",Spain,77.50,1,4,-18,29
+277,Destilerías Y Crianza,Spain,67.59,18,172,-4,41
+278,Destilérka Svach,Czech Republic,86.00,1,1,14,49
+279,Destillate Siegfried Herzog,Austria,63.33,1,5,13,47
+280,Destille Kaltenthaler,Germany,54.00,3,6,8,50
+281,Destillerie & Genussmanufaktur Rieger & Hofmeister,Germany,59.00,4,6,9,49
+282,Destillerie Egnach,Switzerland,79.15,2,23,9,48
+284,Destillerie Gößwein,Germany,40.67,4,6,10,50
+287,Destillerie Ralf Hauer ,Germany,82.48,10,60,8,49
+288,Destillerie Rogner,Austria,75.00,6,6,15,49
+289,Destillerie Wilhelm Behr,Germany,0.00,1,1,12,52
+290,Destylarnia Piasecki,Poland,74.00,1,1,20,54
+291,Det Norske Brenneri,Norway,81.21,6,19,11,60
+292,Detroit City Distillery,United States,76.00,3,1,-83,42
+294,Die Kleinbrennerei Rackelmann,Germany,0.00,2,2,11,50
+295,Die kleine Destillerie,Germany,70.00,2,1,9,49
+299,Dillon's Small Batch  Distillers,Canada,77.00,3,11,-79,43
+300,Distilleerderij Keuris,Netherlands,77.43,1,7,5,52
+301,Distillerie Castan,France,76.50,4,20,2,44
+302,Distillerie Claeyssens de Wambrechies,France,65.96,6,44,3,51
+303,Distillerie de Biercée,Belgium,52.00,1,18,4,50
+304,Distillerie de Monsieur Balthazar,France,74.17,2,17,3,47
+305,Distillerie de Paris,France,42.50,3,9,2,49
+306,Distillerie des Menhirs,France,78.75,13,296,-4,48
+307,Distillerie Diedenacker,Luxembourg,68.33,7,46,6,50
+308,Distillerie Dreum,France,73.00,1,1,4,50
+309,Distillerie du Pays d'Othe,France,71.83,3,9,2,46
+310,Distillerie du Pays d'Othe,France,71.83,3,9,2,46
+311,Distillerie du Pays d'Othe,France,71.83,3,9,2,46
+312,Distillerie du Périgord,France,74.43,2,22,1,45
+313,Distillerie du St. Laurent,Canada,0.00,1,2,-69,48
+314,Distillerie Ergaster,France,73.00,1,1,3,50
+315,Distillerie G. Miclo,France,83.82,6,35,-118,34
+316,Distillerie Grallet-Dupic,France,78.26,14,135,6,48
+317,Distillerie Janot,France,0.00,2,4,6,43
+318,Distillerie La Rouget de L'Isle,France,85.08,4,19,5,47
+319,Distillerie Mavela,France,73.46,16,162,9,42
+320,Distillerie Meyer,France,75.34,3,95,7,48
+321,Distillerie Moutard,France,73.00,1,1,4,48
+322,Distillerie Muller-Lemmer,Luxembourg,78.00,1,6,6,50
+324,Distillerie Seetal GmbH,Switzerland,0.00,3,5,8,47
+325,Distillerie Theo Preiss,France,75.50,2,11,7,48
+326,Distillery 291,United States,0.00,6,13,-105,39
+328,Dobson's,Australia,76.00,3,1,151,-31
+329,Doc Porter's Distillery,United States,0.00,1,1,-81,35
+330,Dolleruper Destille,Germany,62.84,4,12,10,55
+331,Domaine de Bourjac,France,71.00,1,2,6,50
+332,Domaine des Hautes Glaces,France,79.15,26,125,6,45
+333,Don Quixote Distillery,United States,82.00,1,1,-106,36
+334,Donner-Peltier Distillers,United States,0.00,2,3,-91,30
+335,Door County Distillery,United States,0.00,1,2,-87,45
+337,Doz de Dauzanges,France,65.00,1,5,-1,49
+339,Drexler,Germany,72.70,37,55,13,49
+341,Dry Fly Distilling,United States,80.36,15,62,-117,48
+344,DÜRR Edelbranntweine GmbH,Germany,77.17,3,6,9,49
+345,Duvel Moortgat,Belgium,43.73,2,127,4,51
+346,Duvel Moortgat,Belgium,43.73,2,127,4,51
+348,Eaglesburn Distillery,Netherlands,81.00,6,16,4,51
+350,Eastside Distilling,United States,78.13,4,6,-123,46
+351,Eau Claire Distillery Ltd.,Canada,0.00,1,1,-114,51
+352,Echlinville Distillery Ltd,Ireland,76.06,8,96,-6,54
+353,Edelbrände Senft,Germany,72.43,13,75,9,48
+354,Edelbrennerei Anton Bischof ,Germany,61.00,2,7,10,50
+355,Edelbrennerei Dirker ,Germany,76.83,4,10,9,50
+356,Edelbrennerei Haas,Germany,76.19,11,11,11,50
+357,Edelbrennerei Schloss Neuenburg,Germany,79.38,3,20,12,51
+358,Edelobst & Whiskydestille Höning,Germany,79.00,3,8,8,50
+359,Edgefield Distillery,United States,81.00,7,12,-122,46
+360,Eifel Destillate,Germany,77.81,29,80,8,50
+361,Eigashima Shuzo ,Japan,82.67,65,1118,135,35
+362,Eimverk Distillery,Iceland,69.08,27,243,-22,64
+363,Eleven Wells Spirit,United States,76.00,6,2,-93,45
+365,"Emperador Distillers, Inc.",Philippines,38.00,1,3,121,14
+366,Enghaven,Denmark,68.50,2,8,10,57
+368,English Spirit Distillery (Old Salt Depot),United Kingdom,87.13,5,4,0,52
+370,Erismann,Switzerland,79.50,2,13,9,48
+371,Erlebnisbrennerei Kallnach,Switzerland,73.83,3,16,7,47
+372,Etter,Switzerland,77.24,16,62,8,47
+374,Fary Lochan,Denmark,79.66,22,117,9,56
+375,Feinbrennerei Simon's,Germany,71.50,2,23,9,50
+376,Feiner Kappler,Germany,85.50,1,14,8,49
+377,Feisty Spirits Distillery,United States,0.00,3,2,-105,41
+378,FEW Spirits,United States,82.32,27,171,-88,42
+379,Filibuster Distillery,United States,82.38,5,9,-78,39
+380,Finch Whiskydestillerie,Germany,79.10,36,208,10,49
+381,Finger Lakes Distilling,United States,78.62,11,30,-77,42
+382,Fisselier,France,0.00,1,3,-2,48
+383,Fleurieu Distillery,Australia,0.00,4,6,139,-35
+395,Florida Farm Distillers,United States,76.88,2,8,-82,29
+396,Fogs's End Distillery,United States,69.00,1,1,-121,37
+397,Foothills Distillery,United States,80.29,2,1,-81,36
+398,Forgan Distillery Ltd.,United Kingdom,0.00,2,2,-3,54
+399,Forschungs- und Lehrbrennerei der UNI Hohenheim     ,Germany,50.00,5,3,9,49
+400,Forty Creek,Canada,82.33,20,323,-80,43
+401,Four Roses Distillery,United States,83.79,839,2751,-85,38
+405,Franz Kostenzer,Austria,54.03,12,27,12,47
+406,Franz Stettner & Sohn GmbH,Germany,86.00,1,1,12,48
+407,Franzlahof,Austria,0.00,1,1,14,47
+408,Fremont Mischief Distillery,United States,60.00,4,4,-122,48
+409,Fuji Gotemba,Japan,84.34,66,520,139,35
+411,Gammelstilla Whisky AB,Sweden,85.84,2,45,17,60
+412,Garrison Brothers Distillery,United States,78.12,11,46,-99,30
+413,Gasthausbrauerei Wismar GmbH,Germany,82.22,4,17,11,54
+414,Gasthof Hirsch,Germany,58.00,1,1,10,49
+416,Gelephu Distillery,Bhutan,77.67,4,16,90,27
+417,Gemenc Distillery,Hungary,78.00,2,2,19,46
+418,George Washington's Grist Mill and Distillery,United States,0.00,3,6,-77,39
+420,Georgia Distilling Company,United States,0.00,1,2,-83,33
+421,Gerhard Büchner,Germany,66.28,4,16,12,51
+422,Gerlachus Stokerij,Netherlands,64.50,7,7,6,51
+423,Gilbert Holl,France,80.83,3,4,7,48
+424,Gimli,Canada,0.00,2,2,-97,51
+425,Ginebra San Miguel Inc.,Philippines,0.00,1,1,121,15
+426,Glacier Distilling,United States,63.00,5,4,-114,48
+429,Glann ar Mor,France,84.91,82,814,-3,49
+430,Glen Els,Germany,86.34,226,6474,11,52
+431,Glen Els,Germany,86.34,226,6474,11,52
+432,Glen Kella,United Kingdom,69.58,5,19,-2,53
+434,Glendalough,Ireland,79.28,21,599,-6,53
+435,Glenmore Distilleries Co.,United States,88.50,16,9,-87,38
+436,Glenora Distillery,Canada,77.40,29,263,-61,46
+437,Glina Whisky Destillerie,Germany,72.60,13,28,13,52
+438,Goalong Liquor,China,58.00,4,1,113,28
+441,Golden Moon Distillery,United States,84.84,3,19,-105,40
+443,Gooderham & Worts,Canada,85.75,1,3,-79,44
+444,Goodridge & Willams,Canada,0.00,1,1,-123,49
+445,Gotland Whisky,Sweden,81.92,4,278,18,58
+446,Gouden Carolus,Belgium,73.19,1,1,4,51
+447,Gourmet Berner GmbH & Co. KG,Germany,0.00,1,1,9,49
+448,Graanbranderij De IJsvogel,Netherlands,75.88,5,36,6,51
+449,Graanstokerij Filliers ,Belgium,72.86,31,405,4,51
+450,Grand Traverse Distillery,United States,80.34,3,11,-86,45
+451,GrandTen Distilling,United States,70.00,1,1,-71,42
+452,Granit Destillerie,Austria,20.75,2,1,15,49
+453,Great Lakes Distillery,United States,80.83,6,4,-88,43
+454,Great Northern Distillery,Ireland,87.29,5,11,-6,54
+455,Great Outback,Australia,75.25,2,22,134,-25
+456,Great Outback,Australia,75.25,2,22,134,-25
+457,Great Southern Distilling Company,Australia,75.28,20,20,118,-35
+458,Great Southern Distilling Company,Australia,75.28,20,20,118,-35
+459,Great Wagon Road Distilling Company,United States,0.00,2,2,-81,35
+461,Greenbar Distillery,United States,75.00,2,2,-118,34
+464,Grythyttan,Sweden,81.93,25,762,15,60
+465,Guglhof,Austria,73.52,12,28,13,48
+466,Guillon,France,75.05,18,126,4,49
+467,Gute Destilleri,Sweden,73.84,2,50,18,57
+471,Habbel's Destillerie & Brennerei,Germany,66.33,8,30,7,51
+473,Hagen-Rühli,Switzerland,80.25,12,12,9,48
+474,Hakushu,Japan,87.46,134,4658,139,36
+475,Hali'imaile Distilling Co.,United States,0.00,1,2,-156,21
+476,Hamilton Distillers,United States,81.90,6,15,-111,32
+477,Hanyu,Japan,88.87,166,3486,140,36
+478,Harald Keckeis,Austria,67.71,3,4,10,47
+481,Hausbrauerei Altstadthof,Germany,82.21,37,98,11,49
+482,Hausbrennerei Hettig,Germany,71.00,1,3,8,49
+484,Healey's Cornish Cyder Farm,United Kingdom,87.50,4,14,-5,50
+485,"Heaven Hill Distilleries, Inc.",United States,83.63,654,6029,-85,38
+486,Helios Distillery,Japan,76.54,3,18,138,36
+487,Helios Distillery,Japan,76.54,3,18,138,36
+488,Helios Distillery,Japan,76.54,3,18,138,36
+489,Helios Distillery,Japan,76.54,3,18,138,36
+490,Hellyers Road Distillery,Australia,80.23,28,247,146,-41
+491,Henry Farms Prairie Spirits,United States,0.00,7,4,-89,43
+492,Hepp,France,78.21,28,76,8,49
+493,Heritage Distilling Company,United States,79.25,11,2,-123,47
+495,Hiebl Destillerie,Austria,0.00,1,1,15,48
+496,Hierber Brennerei,Luxembourg,51.00,1,2,6,50
+497,High West Distillery,United States,84.21,97,673,-111,41
+498,HighGlen Whisky Distillery,Switzerland,78.33,5,10,10,47
+500,Highwood Distillers,Canada,80.98,17,100,-114,51
+501,Hillrock Estate Distillery,United States,84.44,4,42,-74,42
+502,Hiram Walker,Canada,78.05,100,625,-106,56
+503,Hiram Walker,Canada,78.05,100,625,-106,56
+505,Höllberg Brennerei,Germany,48.00,1,3,8,49
+506,Hollen,Switzerland,77.59,36,65,8,47
+507,Homberg KG Weinbrennerei - Schloss Magenheim,Germany,0.00,1,1,9,49
+508,Hood River Distillers Inc.,United States,71.39,7,40,-122,46
+509,Horstman Destilleerderij,Netherlands,69.54,4,19,7,52
+510,House Spirits Distillery,United States,84.00,7,21,-123,46
+511,Humbel Distillery,Switzerland,74.69,21,32,8,47
+512,Hven,Sweden,82.05,12,863,13,56
+514,Ingendael,Belgium,85.00,2,1,6,51
+515,Iron Smoke,United States,0.00,1,3,-77,43
+516,Ironbridge Spirit Company,United Kingdom,0.00,1,2,-3,53
+530,It's 5 Artisan Distillery,United States,75.00,2,2,-120,48
+531,Ivy Mountain,United States,0.00,2,1,-83,35
+533,J. Riley Distillery ,United States,0.00,1,1,-117,34
+534,Jack Daniel's,United States,77.98,381,7548,-86,35
+535,James Sedgwick,South Africa,78.94,17,375,19,-34
+536,Jersey Spirits Distilling Co.,United States,0.00,1,1,-74,41
+538,Jim Beam,United States,78.90,474,6575,-86,38
+539,Joh. B. Geuting,Germany,75.52,18,94,7,52
+540,John Distilleries,India,84.32,84,1378,79,21
+541,John Distilleries,India,84.32,84,1378,79,21
+542,John Distilleries,India,84.32,84,1378,79,21
+544,John's Lane Distillery,Ireland,85.06,17,35,-6,53
+545,Jones Road Distillery,Ireland,84.75,2,1,-6,53
+546,Jones Road Distillery,Ireland,84.75,2,1,-6,53
+547,Jones Road Distillery,Ireland,84.75,2,1,-6,53
+548,Jos. A. Magnus & Co.,United States,90.75,5,13,-77,39
+550,Journeyman Distillery,United States,85.10,41,56,-87,42
+551,Kaerilis,France,84.34,12,17,-3,47
+552,Kagoshima,Japan,86.44,7,69,131,32
+553,Kalkwijck Distillers,Netherlands,79.58,7,159,7,52
+554,Kampen Destillateurs,Netherlands,0.00,8,46,4,52
+555,Kanosuke,Japan,0.00,1,1,130,32
+556,Karuizawa,Japan,88.71,529,13655,139,37
+557,Kauzen Bräu,Germany,76.81,7,36,10,50
+558,Kavalan,Taiwan,86.75,925,8610,122,25
+559,Kawasaki,Japan,90.13,17,344,140,36
+562,Kentucky Bourbon Distillers,United States,84.76,459,1444,-85,38
+563,Kentucky Peerless Distilling Co.,United States,89.00,3,6,-86,38
+566,Kilbeggan Distillery,Ireland,82.23,14,63,-7,53
+567,Kings County Distillery,United States,75.15,13,51,-74,41
+570,Kinzigbrennerei,Germany,73.44,15,22,8,48
+571,Kiwi Spirit Distillery Ltd.,New Zealand,62.00,3,1,173,-41
+573,Kleinbrennerei Fitzke,Germany,74.00,4,10,8,48
+580,Kord Distillery,Czech Republic,0.00,1,1,16,50
+581,Kornbrennerei Gerhard Wagner,Germany,66.33,5,6,8,50
+582,Kornbrennerei J.J. Kemper,Germany,84.43,2,14,8,51
+583,KOVAL Distillery,United States,76.91,52,211,-88,42
+584,Kozuba & Sons Distillery,United States,0.00,2,2,-83,28
+585,Kuenz Naturbrennerei,Austria,90.50,2,7,13,47
+586,Kümin Weinbau,Switzerland,74.13,5,15,9,47
+587,Kymsee Whisky,Germany,78.43,6,33,13,48
+588,Kyrö Distillery Company,Finland,79.06,11,57,22,63
+590,Lagler,Austria,80.63,4,19,7,47
+591,Lahnsteiner Brauerei,Germany,68.25,2,16,8,50
+592,Lake George Distilling Co.,United States,77.50,3,6,-74,43
+593,Lambay Irish Whiskey Company,Ireland,78.50,1,4,-6,53
+595,Langatun,Switzerland,82.30,165,609,8,47
+596,Lark Distillery,Australia,82.00,66,115,147,-43
+597,Las Vegas Distillery,United States,80.41,16,10,-115,36
+598,Last Mountain Distillery,Canada,77.50,4,9,-95,39
+599,Lava Bräu Braumanufaktur,Austria,54.00,20,6,16,47
+600,Lawrenceburg Distillery ,United States,81.22,16,63,-85,39
+601,Laws Whiskey House,United States,83.33,10,5,-105,40
+602,LB Distillers,Canada,79.67,3,5,-107,52
+603,Lebe & Geniesse - Langenrohr,Austria,84.25,4,3,16,48
+604,Lechtaler Haussegen,Austria,0.00,2,3,10,47
+605,Leopold Bros,United States,70.59,6,19,-105,40
+606,Lexington Brewing and Distilling Co.,United States,76.70,7,24,-85,38
+607,Liber,Spain,70.67,1,17,-4,37
+608,Liberty Call Distillery,United States,0.00,1,1,-117,33
+609,Likörfabrik Mikolasch,Austria,0.00,1,1,16,48
+610,Limeburners,Australia,77.05,20,15,118,-35
+611,Limeburners,Australia,77.05,20,15,118,-35
+612,Limestone Branch Distillery,United States,84.22,14,34,-85,38
+614,Lo Artisan Distillery,United States,0.00,1,1,-88,45
+615,Lobangernich,Germany,75.34,4,7,16,48
+616,London Distillers (K) Ltd.,Kenya,56.00,2,2,37,-1
+618,Long Island Spirits,United States,81.78,23,19,-73,41
+619,Longhorn Distillery,Germany,0.00,3,3,12,50
+620,Los 2 Compadres,Mexico,81.00,3,1,-105,21
+621,Lost Spirits Distillery,United States,72.47,21,152,-122,37
+622,Louisville Distilling Co LLC,United States,83.41,22,325,-96,37
+624,Lüthy,Switzerland,81.32,31,121,8,47
+625,Luxco,United States,80.76,67,286,-90,39
+626,Lynchburg Distillery,United States,0.00,1,4,-96,37
+627,Lynchburg Distillery,United States,0.00,1,4,-96,37
+628,Lynchburg Distillery,United States,0.00,1,4,-96,37
+629,Lynchburg Distillery,United States,0.00,1,4,-96,37
+630,Lynchburg Distillery,United States,0.00,1,4,-96,37
+631,Lynchburg Distillery,United States,0.00,1,4,-96,37
+632,Lynchburg Distillery,United States,0.00,1,4,-96,37
+633,Lynchburg Distillery,United States,0.00,1,4,-96,37
+634,Lynchburg Distillery,United States,0.00,1,4,-96,37
+635,Lynchburg Distillery,United States,0.00,1,4,-96,37
+636,Lynchburg Distillery,United States,0.00,1,4,-96,37
+637,Macardo,Switzerland,78.67,13,18,9,48
+638,Mackmyra,Sweden,82.27,241,11297,17,61
+639,Mad River Distillers,United States,79.50,2,3,-73,44
+640,Mahrs Bräu,Germany,0.00,1,1,11,50
+642,Maison Du Vigneron,France,83.00,2,8,6,47
+643,"Maker''s Mark Distillery, Inc.",United States,81.54,196,1856,-85,38
+644,Malibreiz,France,65.00,1,1,-2,48
+645,Manly Spirits Co. Distillery,Australia,0.00,1,1,151,-34
+646,Marder Distillery,Germany,79.62,8,54,8,48
+647,Marillenhof - Destillerie - Kausl,Austria,69.33,7,15,15,48
+648,Märkische Spezialitätenbrennerei KG,Germany,76.00,11,38,8,51
+652,Matsui Shuzo,Japan,77.78,18,161,136,35
+654,McCormick Distilling Co.,United States,73.96,9,70,-95,39
+655,McDowell's,India,49.25,5,16,79,21
+656,McDowell's,India,49.25,5,16,79,21
+657,McDowell's,India,49.25,5,16,79,21
+660,McHenry Distillery,Australia,84.00,2,2,148,-43
+661,McHenry Distillery,Australia,84.00,2,2,148,-43
+662,Meissener Spezialitätenbrennerei,Germany,80.17,2,16,13,51
+664,MGP,United States,84.51,58,44,-95,40
+665,Michelehof,Austria,0.00,1,9,10,47
+666,Michter's Distillery,United States,85.11,148,1018,-86,38
+667,Middle West Spirits,United States,77.50,5,8,-83,40
+668,Midleton (1975-),Ireland,82.89,389,15051,-8,52
+669,Mile High Spirits,United States,0.00,1,1,-105,40
+670,Minhas Distillery,United States,67.67,3,4,-90,43
+671,Mississippi River Distilling Company,United States,81.00,13,13,-90,42
+673,Miyagikyo,Japan,86.08,229,9864,141,38
+674,Miyashita Sake Brewery,Japan,77.67,6,11,138,36
+675,Miyashita Sake Brewery,Japan,77.67,6,11,138,36
+676,Miyashita Sake Brewery,Japan,77.67,6,11,138,36
+677,Miyashita Sake Brewery,Japan,77.67,6,11,138,36
+678,Monde Shuzou,Japan,66.82,8,402,138,36
+679,Monde Shuzou,Japan,66.82,8,402,138,36
+680,Monde Shuzou,Japan,66.82,8,402,138,36
+681,Monde Shuzou,Japan,66.82,8,402,138,36
+683,Moon Harbour,France,79.35,3,43,-1,45
+684,Mosgaard Whisky,Denmark,73.75,3,7,11,55
+686,Mosterei & Brennerei Kobelt,Switzerland,70.00,3,8,10,47
+687,Mountain Laurel Spirits,United States,80.03,11,59,-75,40
+688,Murree Brewery,Pakistan,4.00,7,2,69,30
+689,Myer Farm Distillers,United States,79.50,4,5,-77,43
+691,Mykulynetsky Brovar,Ukraine,16.80,5,13,-83,42
+692,Nagahama,Japan,79.00,3,12,136,35
+694,Nant Distillery,Australia,83.00,16,43,147,-42
+695,Nantou Distillery,Taiwan,84.18,88,183,121,24
+696,Nelson's Green Brier Distillery,United States,86.92,11,34,-87,36
+698,Nestville Distillery,Slovakia,74.09,12,65,21,49
+700,New England Distilling,United States,0.00,1,3,-70,44
+701,New Holland Brewing,United States,82.98,11,32,-86,43
+702,New Riff Distilling,United States,0.00,7,6,-84,39
+703,New World Whisky Distillery,Australia,85.74,28,172,145,-38
+704,New York Distilling Company  ,United States,82.13,2,11,-74,41
+706,Niederrhein Destille,Germany,73.00,2,6,6,52
+708,Nishinomiya,Japan,86.31,28,625,135,35
+709,NORDIK Edelbrennerei & Spirituosenmanufaktur,Germany,60.67,4,2,10,54
+710,Nordisk Brænderi,Denmark,83.71,11,50,9,57
+712,Norrtelje Brenneri,Sweden,75.92,4,98,19,60
+713,North of 7 Distillery,Canada,85.00,3,1,-76,45
+715,Northmaen,France,69.42,4,31,1,50
+716,Number Nine Spirituosenmanufaktur GmbH,Germany,79.50,13,66,10,51
+718,Nyborg Distillery,Denmark,81.00,6,16,10,56
+719,Nyborg Distillery,Denmark,81.00,6,16,10,56
+720,Nyborg Distillery,Denmark,81.00,6,16,10,56
+727,Ohishi Distillery,Japan,79.22,3,13,131,32
+728,Okanagan Spirits,Canada,83.00,7,6,-119,50
+729,Old Comber,Ireland,87.55,3,20,-8,53
+730,Old Comber,Ireland,87.55,3,20,-8,53
+731,Old Comber,Ireland,87.55,3,20,-8,53
+732,Old Comber,Ireland,87.55,3,20,-8,53
+733,Old Crow Distillery,United States,80.67,18,31,-85,38
+735,Old Forge Distillery,United States,85.33,3,3,-84,36
+737,Old Grand-Dad Distillery,United States,82.70,37,30,-85,38
+738,Old Hobart Distillery,Australia,82.34,25,59,147,-43
+739,Old Midleton (1825-1975),Ireland,86.88,22,33,-8,53
+740,Old Midleton (1825-1975),Ireland,86.88,22,33,-8,53
+741,Old Midleton (1825-1975),Ireland,86.88,22,33,-8,53
+742,Old Midleton (1825-1975),Ireland,86.88,22,33,-8,53
+743,Old Nick Williams Co.,United States,0.00,1,1,-80,36
+744,Old Pogue,United States,82.86,3,19,-84,39
+745,Old Raven,Austria,82.52,25,44,16,47
+746,Old Rip van Winkle,United States,87.64,48,1093,-86,38
+747,Old Sandhill,Germany,77.17,4,6,13,52
+750,Old Tahoe Distillery,United States,83.00,1,4,-119,39
+752,Ole Smoky Distillery,United States,30.25,7,138,-84,36
+753,Oola Distillery,United States,0.00,3,6,-122,48
+754,Oppidan Spirits,United States,0.00,1,1,-88,42
+755,Oregon Spirit Distillers,United States,80.00,2,5,-121,44
+756,Öufi-Brauerei,Switzerland,82.50,6,10,8,47
+757,Ozark Distillery,United States,0.00,1,1,-93,38
+759,Palmetto Distillery,United States,0.00,2,3,-83,35
+760,Panimoravintola Beer Hunter's,Finland,82.63,10,10,22,61
+762,Panther Distillery,United States,68.50,5,5,-95,46
+763,Parliament Distillery,United States,50.50,2,1,-122,47
+764,Patrick Breindl,Switzerland,65.00,1,1,8,47
+765,Peach Street Distillers,United States,78.25,3,9,-108,39
+766,Pearse Lyons Distillery,Ireland,79.29,9,26,-6,53
+767,Peloni,Italy,75.67,2,5,10,46
+768,Pelter Distillery,Israel,78.50,1,7,35,31
+769,Pemberton Distillery,Canada,82.00,5,9,-123,50
+770,Penderyn,United Kingdom,82.78,108,1856,-4,52
+772,Peter Affenzeller,Austria,68.97,6,12,14,48
+773,Pfanner,Austria,75.66,9,37,10,47
+774,Pfau Brennerei,Austria,59.50,4,8,14,47
+776,Piedmont Distillers,United States,78.25,6,24,-80,36
+777,Pittsburgh Distilling Company,United States,79.00,20,8,-80,40
+778,Popcorn Sutton Distillery,United States,60.00,3,8,-83,36
+779,Port Chilkoot Distillery,United States,0.00,2,2,-135,59
+780,Potter,Canada,83.18,8,41,-119,50
+781,Pradlo Distillery,Czech Republic,77.46,5,449,15,50
+782,Praskoveya Winery,Russian Federation,58.17,5,5,44,45
+783,Preussische Whisky Destillerie,Germany,69.96,35,59,14,53
+784,Prichard's,United States,80.28,13,58,-86,35
+786,Privatbrauerei Friedrich Düll,Germany,76.94,4,7,10,50
+787,Puni,Italy,78.26,20,454,11,47
+788,R. Jelínek,Czech Republic,85.57,31,614,18,49
+789,Rabbit Hole Distilling,United States,0.00,3,7,-86,38
+790,Rabel,Germany,55.55,6,53,9,49
+791,Radermacher,Belgium,74.65,7,161,6,51
+792,Radico Khaitan Ltd,India,73.07,7,49,79,29
+794,Ranger Creek,United States,78.25,8,27,-98,30
+795,Ransom,United States,84.11,6,17,-123,45
+796,Re:Find,United States,0.00,1,2,-121,36
+797,Rebecca Creek Distillery,United States,0.00,1,2,-98,30
+799,Reisetbauer,Austria,66.43,13,81,14,48
+800,Reservoir Distillery,United States,82.00,12,10,-77,38
+801,Rich Grain Distilling Co.,United States,0.00,1,2,-90,33
+803,Rittmeister Destille,Germany,72.00,1,1,12,54
+804,Robert Meisner GmbH & Co. KG,Germany,0.00,2,3,9,54
+805,Rock Town,United States,80.67,28,91,-92,35
+806,Rogue Spirits,United States,69.13,2,29,-96,37
+807,Rogue Spirits,United States,69.13,2,29,-96,37
+808,Rogue Spirits,United States,69.13,2,29,-96,37
+809,Rogue Spirits,United States,69.13,2,29,-96,37
+810,Rogue Spirits,United States,69.13,2,29,-96,37
+811,Rogue Spirits,United States,69.13,2,29,-96,37
+812,Rogue Spirits,United States,69.13,2,29,-96,37
+813,Rogue Spirits,United States,69.13,2,29,-96,37
+814,Rogue Spirits,United States,69.13,2,29,-96,37
+815,Rogue Spirits,United States,69.13,2,29,-96,37
+816,Rogue Spirits,United States,69.13,2,29,-96,37
+819,Rothaus,Germany,76.53,22,277,8,48
+820,RoughStock,United States,74.59,15,49,-111,46
+821,Royal Brewhouse,Indonesia,75.50,4,2,107,-6
+822,Rugenbräu,Switzerland,82.89,44,197,8,47
+824,Sächsische Spirituosenmanufaktur,Germany,74.50,1,2,14,51
+826,Sagamore Spirit Distillery,United States,0.00,1,1,-77,39
+829,Salm Bräu,Austria,0.00,1,1,16,48
+830,Sammerhof,Austria,88.00,2,1,14,48
+831,Samuel Smith & Son,Australia,84.00,7,30,151,-34
+832,San Diego Distillery,United States,0.00,3,3,-117,33
+833,Santa Fe Spirits,United States,82.45,5,19,-106,36
+834,Säntisblick Destillerie Ltd.,Switzerland,56.46,6,20,9,47
+835,Sasanokawa Shuzo,Japan,83.70,20,327,137,35
+836,Sauerländer Edelbrand GmbH,Germany,83.84,8,44,8,51
+837,Savage & Cooke,United States,84.00,2,2,-122,38
+838,Schäffler Bräu,Germany,79.50,1,1,10,48
+839,Schlitzer Korn- & Edelobstbrennerei GmbH,Germany,69.18,12,71,10,51
+840,Schloss Marienburg - Spirituosenwerke - Heinrich Nagel KG,Germany,0.00,1,1,10,52
+841,Schlossbrauerei Autenried GmbH,Germany,76.00,1,2,10,48
+842,Schwane Destillerie,Germany,83.67,6,14,10,50
+843,Scissortail Distillery,United States,0.00,2,1,-97,35
+844,Scriptor Brennerei,Germany,0.00,5,13,8,49
+847,Sempione Distillery,Switzerland,80.00,4,6,8,46
+848,Seppelbauer,Austria,0.00,1,1,15,48
+850,Shelter Distilling,United States,0.00,1,1,-119,38
+851,Shelter Point Distillery,Canada,86.89,7,24,-125,50
+852,Shinshu Mars,Japan,86.05,136,1830,138,36
+859,Sibling Distillery,United Kingdom,54.00,5,5,-2,52
+872,Sinnesfreuden Neber-Hagemann,Austria,0.00,1,3,15,47
+873,Six & Twenty Distillery,United States,0.00,1,2,-96,37
+875,Slane,Ireland,76.83,3,8,-7,54
+876,Sliabh Liag Distillery,Ireland,61.67,1,2,-9,55
+877,Slyrs,Germany,77.33,118,2210,12,48
+878,Small-Brook,Luxembourg,81.22,6,26,6,50
+879,Smögen Whisky,Sweden,85.77,34,1904,11,58
+880,Smooth Ambler Spirits,United States,83.96,142,319,-80,38
+882,Sonnenbräu,Switzerland,78.38,6,12,10,47
+883,Sonnenscheiner,Germany,73.08,5,50,7,51
+884,Sonoma County Distilling Co. ,United States,83.77,26,72,-123,38
+885,Sons of Liberty,United States,78.50,6,12,-72,41
+887,Southern Coast Distillers,Australia,83.50,8,3,134,-25
+888,Southern Coast Distillers,Australia,83.50,8,3,134,-25
+889,Southern Distilleries Ltd.,New Zealand,40.50,6,5,171,-44
+892,Southern Grain Spirits,New Zealand,65.33,1,4,173,-43
+893,Southern Tier Distilling Co.,United States,0.00,2,2,-79,42
+894,Sperbers Destillerie,Germany,84.00,3,3,11,50
+895,Sperling Silver Distillery,Canada,60.00,1,2,-105,50
+898,Spezialitätenbrennerei Weidhof,Switzerland,74.00,4,13,8,47
+899,Spirit Hound Distillers,United States,81.00,1,2,-105,40
+900,Spirit of Yorkshire Distillery,United Kingdom,89.00,3,10,0,54
+901,Spirit Works Distillery,United States,0.00,1,1,-123,38
+902,Split Rock Distillery,United States,81.33,1,1,-70,44
+903,Spreewald Brennerei,Germany,73.75,13,98,14,52
+904,Spreewood Distillers,Germany,77.56,6,41,14,52
+917,St. George Spirits,United States,78.63,16,66,-122,38
+918,St. George's Distillery,United Kingdom,79.77,242,1098,1,52
+919,St. Kilian Distillers,Germany,81.31,12,349,9,50
+920,St. Patrick's Distillery,Ireland,80.78,5,43,-8,52
+923,Stadsbrouwerij De Hemel,Netherlands,52.33,4,20,6,52
+924,Stammheimer,Switzerland,72.67,3,11,9,48
+926,Stark Spirits Distillery,United States,0.00,5,2,-118,34
+927,Starkenberg,Austria,71.91,4,46,11,47
+928,Starlight Distillery,United States,0.00,4,3,-86,38
+929,Stauning,Denmark,78.18,56,1051,8,56
+931,Steigmiller-Lutz,Germany,70.00,1,2,10,48
+932,Stein Distillery Inc.,United States,87.17,7,36,-117,45
+933,Steinhauser,Germany,79.91,10,58,10,48
+934,Steinwälder Hausbrennerei Schraml,Germany,59.75,12,41,12,50
+935,Still Waters Distillery,Canada,79.75,23,47,-79,44
+936,StilltheOne,United States,83.00,2,2,-74,41
+937,Stillwater Spirits / Moylan's Distilling Co.,United States,0.00,5,5,-123,38
+938,Stitzel-Weller,United States,85.34,250,286,-96,37
+939,Stitzel-Weller,United States,85.34,250,286,-96,37
+940,Stitzel-Weller,United States,85.34,250,286,-96,37
+941,Stitzel-Weller,United States,85.34,250,286,-96,37
+942,Stitzel-Weller,United States,85.34,250,286,-96,37
+943,Stitzel-Weller,United States,85.34,250,286,-96,37
+944,Stitzel-Weller,United States,85.34,250,286,-96,37
+945,Stitzel-Weller,United States,85.34,250,286,-96,37
+946,Stitzel-Weller,United States,85.34,250,286,-96,37
+947,Stitzel-Weller,United States,85.34,250,286,-96,37
+948,Stitzel-Weller,United States,85.34,250,286,-96,37
+949,Stoaninger,Austria,77.50,1,2,14,48
+950,Stock Plzeň,Czech Republic,57.25,4,14,13,50
+951,Stöfflbräu,Austria,72.50,1,4,12,48
+952,Stokerij De Molenberg,Belgium,79.22,13,1129,4,51
+953,Stokerij De Onrust,Netherlands,60.34,3,12,6,52
+954,Stokerij Erve Sculte,Netherlands,85.21,8,69,78,30
+956,Stone Barn Brandyworks,United States,0.00,3,3,-123,45
+957,Stonecutter Spirits,United States,0.00,1,3,-73,44
+958,Stranahan's Colorado Whiskey,United States,85.74,21,107,-105,40
+959,Stratheden,Scotland,0.00,1,1,-3,56
+960,Strong Spirits,United States,81.67,2,2,-85,38
+961,Sugarlands Distilling Co.,United States,76.50,2,3,-84,36
+962,Sullivans Cove,Australia,84.18,91,383,147,-43
+963,Surselva Bräu,Switzerland,66.25,5,10,9,47
+964,Sweet Potato Spirits,United States,0.00,1,2,-121,37
+965,Swhisky,Switzerland,59.42,10,10,7,46
+966,Taconic Distillery,United States,0.00,6,2,-74,42
+969,Tatoosh,United States,75.50,3,5,-122,48
+970,Tattersall Distilling,United States,86.00,1,1,-93,45
+972,Teeling Whiskey Company,Ireland,81.86,1,27,-6,53
+973,Teeling Whiskey Distillery,Ireland,71.29,6,98,-6,53
+974,Teerenpeli,Finland,80.74,29,553,26,61
+975,Tekel,Turkey,67.67,4,18,35,39
+976,Telser Distillery,Liechtenstein,77.70,17,36,10,47
+979,Tesetice Distillery,Czech Republic,0.00,1,1,17,50
+980,Tevsjö Destilleri,Sweden,49.00,1,2,16,62
+981,The Belgian Owl,Belgium,78.14,69,730,4,51
+982,The Belgian Owl,Belgium,78.14,69,730,4,51
+983,The Cooper Spirits Co.,United States,84.73,3,43,-96,37
+984,The Cooper Spirits Co.,United States,84.73,3,43,-96,37
+985,The Cooper Spirits Co.,United States,84.73,3,43,-96,37
+986,The Cooper Spirits Co.,United States,84.73,3,43,-96,37
+987,The Cooper Spirits Co.,United States,84.73,3,43,-96,37
+988,The Cooper Spirits Co.,United States,84.73,3,43,-96,37
+989,The Cooper Spirits Co.,United States,84.73,3,43,-96,37
+990,The Cooper Spirits Co.,United States,84.73,3,43,-96,37
+991,The Cooper Spirits Co.,United States,84.73,3,43,-96,37
+992,The Cooper Spirits Co.,United States,84.73,3,43,-96,37
+993,The Cooper Spirits Co.,United States,84.73,3,43,-96,37
+994,The Dingle Whiskey Distillery,Ireland,83.25,9,164,-10,52
+995,The Dublin Liberties Distillery,Ireland,79.85,5,61,-6,53
+997,The Golan Heights Distillery,Israel,80.46,10,32,36,33
+999,The Helsinki Distilling Co.,Finland,75.40,7,21,25,60
+1000,The Lakes Distillery,United Kingdom,78.27,18,160,-3,55
+1002,The London Distillery Company,United Kingdom,80.50,2,4,0,51
+1003,The Lübbehusen Malt Distillery,Germany,82.86,1,37,8,53
+1004,The Milk & Honey Distillery,Israel,86.58,9,48,35,32
+1005,The Original Texas Legend Distillery,United States,0.00,2,2,-94,30
+1006,The Oxford Artisan Distillery,United Kingdom,86.00,1,2,-1,52
+1008,The Splinter Group Spirits,United States,84.02,3,19,-96,37
+1009,The Splinter Group Spirits,United States,84.02,3,19,-96,37
+1010,The Splinter Group Spirits,United States,84.02,3,19,-96,37
+1011,The Splinter Group Spirits,United States,84.02,3,19,-96,37
+1012,The Splinter Group Spirits,United States,84.02,3,19,-96,37
+1013,The Splinter Group Spirits,United States,84.02,3,19,-96,37
+1014,The Splinter Group Spirits,United States,84.02,3,19,-96,37
+1015,The Splinter Group Spirits,United States,84.02,3,19,-96,37
+1016,The Splinter Group Spirits,United States,84.02,3,19,-96,37
+1017,The Splinter Group Spirits,United States,84.02,3,19,-96,37
+1018,The Splinter Group Spirits,United States,84.02,3,19,-96,37
+1019,The Vogel,Germany,78.20,2,8,8,49
+1020,The Waters Distillery,Germany,83.00,1,3,9,49
+1021,The Westfalian,Germany,85.17,14,200,9,52
+1022,Thirteenth Colony Distilleries,United States,81.00,3,3,-84,32
+1023,Thomas Sippel,Germany,60.11,8,26,8,50
+1027,Thomas Wilhelm,Germany,0.00,1,1,9,49
+1028,Thomson Whisky New Zealand Ltd,New Zealand,78.31,9,16,175,-37
+1031,Thuisbrunner Elch-Bräu,Germany,84.28,5,22,11,50
+1032,Thumb Butte Distillery,United States,0.00,4,3,-112,35
+1033,Thunder Road Distillery,United States,83.00,1,4,-84,36
+1035,Timboon Railway Shed Distillery,Australia,81.50,3,9,143,-38
+1036,Tin Shed Distilling Co.,Australia,0.00,8,9,139,-35
+1037,Tipperary Boutique Distillery,Ireland,83.29,11,128,-8,52
+1038,Tirado Distillery,United States,0.00,1,2,-74,41
+1039,To Tårn Bryggeri AS,Norway,0.00,1,1,10,63
+1041,Tom's Foolery Distillery,United States,79.67,7,8,-81,41
+1043,Toronto Distillery Co.,Canada,0.00,3,2,-79,44
+1047,Traverse City Whiskey Co.,United States,75.00,1,2,-86,45
+1048,Trebitsch Old Town Distillery,Czech Republic,67.00,9,7,16,49
+1049,Triple Eight Distillery,United States,89.00,4,3,-70,41
+1050,Trolden Distillery,Denmark,70.75,4,30,10,56
+1051,Trolden Distillery,Denmark,70.75,4,30,10,56
+1052,Trolden Distillery,Denmark,70.75,4,30,10,56
+1053,Tsunuki,Japan,77.61,5,29,130,31
+1054,Tullamore Dew (1829 - 1954),Ireland,90.74,15,32,-8,53
+1055,Tullamore Dew (1829 - 1954),Ireland,90.74,15,32,-8,53
+1056,Tullamore Dew (1829 - 1954),Ireland,90.74,15,32,-8,53
+1057,Tullamore Dew (1829 - 1954),Ireland,90.74,15,32,-8,53
+1058,Tullamore Dew (2014 - present),Ireland,76.78,6,90,-8,53
+1059,Tullamore Dew (2014 - present),Ireland,76.78,6,90,-8,53
+1060,Tullamore Dew (2014 - present),Ireland,76.78,6,90,-8,53
+1061,Tullamore Dew (2014 - present),Ireland,76.78,6,90,-8,53
+1062,Turv Exloo Distillery,Netherlands,63.87,1,78,7,53
+1063,Tuthilltown Spirits,United States,72.41,45,400,-74,42
+1066,Two Doves Destilerija,Serbia And Montenegro,61.67,2,5,19,43
+1068,Uerige,Germany,74.46,4,20,7,51
+1071,United Distillery Group,Egypt,0.00,1,3,31,27
+1072,United Distillery Group,Egypt,0.00,1,3,31,27
+1073,Urban Distilleries,Canada,72.00,1,3,-119,50
+1074,Us Heit Distillery,Netherlands,73.78,111,504,6,53
+1075,Valamo Monastery Distillery,Finland,78.69,11,17,29,63
+1076,Valentine Distilling,United States,84.22,6,10,-83,42
+1077,Vallei Distilleerderij,Netherlands,0.00,1,4,5,52
+1078,Van Brunt Stillhouse,United States,72.88,12,10,-74,41
+1079,van Kleef,Netherlands,86.00,1,7,4,52
+1080,Venus Spirits,United States,80.75,2,4,-122,37
+1081,Victoria Distillers,Canada,0.00,1,1,-123,49
+1082,Vielanker Brauhaus,Germany,51.63,2,6,11,53
+1083,Viktor Senn,Switzerland,0.00,2,1,8,48
+1084,Vingården Lille Gadegård,Denmark,64.75,6,29,15,55
+1085,Vinn,United States,0.00,1,1,-123,46
+1086,Virgil Kaine Lowcountry Whiskey Co.,United States,0.00,2,1,-80,33
+1087,Virginia Distillery Company,United States,82.00,8,16,-79,38
+1088,Virginia Sweetwater Distillery,United States,0.00,1,1,-82,37
+1089,Wädi-Brau-Huus,Switzerland,57.67,8,8,9,47
+1090,Wakatsuru Distillery,Japan,88.32,10,133,137,37
+1091,Waldviertler Roggenhof,Austria,60.48,31,136,15,48
+1092,Wallner,Austria,80.00,1,3,17,48
+1093,Walsh Whiskey Distillery,Ireland,82.50,3,68,-7,53
+1094,Walter Seeger,Germany,68.00,2,6,9,49
+1095,Wannborga Bränneri & Vingård,Sweden,71.34,7,112,17,57
+1096,Warenghem,France,80.64,62,1371,-3,49
+1098,Watershed Distillery,United States,0.00,2,1,-83,40
+1099,Wayne Gretzky Estate,Canada,82.54,5,26,-79,43
+1100,Weidenauer,Austria,80.83,7,22,15,48
+1101,Weinbau zur Krone,Switzerland,81.67,1,5,16,48
+1102,Weinbrennerei und Likörfabrik H. A. Wagner,Germany,0.00,1,1,9,50
+1103,Weingut Dotzauer,Germany,86.00,1,3,8,50
+1104,Weingut Etl,Austria,43.00,1,4,17,48
+1105,Weingut Mößlein,Germany,78.46,3,21,10,50
+1106,West Cork Distillers,Ireland,78.70,30,609,-9,52
+1108,Western Son Distillery,United States,4.00,3,8,-97,33
+1109,Western Spirits Beverage Company,United States,74.11,19,49,-86,37
+1110,Westland Distillery,United States,84.44,72,386,-122,48
+1111,Weutz,Austria,68.01,21,36,15,47
+1112,Wharf Distillery,United Kingdom,87.00,3,2,-1,52
+1113,Whipper Snapper Distillery,Australia,81.00,3,3,116,-32
+1114,Whisky Castle,Switzerland,64.05,69,98,8,48
+1115,Whisky oet Grunn,Netherlands,72.61,4,45,7,53
+1116,WhistlePig,United States,86.24,26,97,-73,44
+1119,Whitmeyer's,United States,89.00,1,1,-96,30
+1120,Widow Jane Distillery,United States,85.81,34,97,-74,41
+1121,Wieser,Austria,72.26,11,77,15,48
+1122,Wijnhuis Texel,Netherlands,73.75,1,7,5,53
+1123,Wild Turkey Distillery,United States,84.31,227,2660,-85,38
+1125,Willett Distillery,United States,86.87,167,236,-85,38
+1126,Willie's,United States,0.00,1,1,-112,45
+1127,Willowbank,New Zealand,82.83,112,671,171,-46
+1131,Wishkah River Distillery,United States,0.00,3,2,-124,47
+1132,Witherspoon Distillery,United States,83.00,1,2,-97,33
+1133,Wood Hat Spirits,United States,0.00,1,1,-91,39
+1134,Wood’s High Mountain Distillery,United States,77.00,4,2,-106,39
+1135,Woodford Reserve,United States,82.12,167,1549,-85,38
+1136,Woodinville Whiskey Co.,United States,58.00,10,14,-122,48
+1138,Workshops Distillery,New Zealand,75.00,3,7,12,55
+1140,Wyoming Whiskey,United States,86.09,17,38,-108,44
+1143,Yamazaki,Japan,87.99,379,13732,136,35
+1144,Yellow Rose Distilling,United States,71.67,10,18,-95,30
+1145,Yeti Distillery,Nepal,0.00,1,1,84,28
+1146,Yoichi,Japan,86.40,393,12094,141,43
+1147,Yukon Brewing & Distilling,Canada,86.00,7,11,-135,61
+1148,Z.Kozuba i Synowie,Poland,45.98,2,45,20,49
+1149,Z'Graggen,Switzerland,78.22,8,36,9,47
+1153,Zeitzer Whisky Manufactur,Germany,77.67,1,7,12,51
+1154,Zuidam Distillery,Netherlands,81.47,142,1990,5,51
+1155,Zur Strandburg,Germany,72.60,11,65,14,54
+1156,Zweiger,Austria,66.00,2,3,15,47
