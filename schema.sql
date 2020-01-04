@@ -18,8 +18,8 @@ CREATE TABLE "company" (
     	"Rating" NUMERIC(5,2),
 	"Whisky" INT,
 	"Collection" INT,
-    	lon INT NOT NULL,
-    	lat INT NOT NULL
+    	lon NUMERIC(10,7) NOT NULL,
+    	lat NUMERIC(10,7) NOT NULL
 );
 
 SELECT * FROM "brand";
