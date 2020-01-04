@@ -1,25 +1,32 @@
-﻿CREATE TABLE "Brands" (
+﻿DROP TABLE brand;
+DROP TABLE company;
+
+CREATE TABLE "brand" (
+	"index" INT NOT NULL,
     	"Brand" VARCHAR NOT NULL,
     	"Country" VARCHAR,
-	"Whiskies" VARCHAR,
-	"Votes" VARCHAR,
-	"Rating" VARCHAR,
-	"WB_Ranking" VARCHAR NOT NULL
+	"Whiskies" INT,
+	"Votes" INT,
+	"Rating" NUMERIC(5,2),
+	"Brand_Ranking" VARCHAR NOT NULL
 );
 
-CREATE TABLE "Distillery" (
+CREATE TABLE "company" (
+	"index" INT NOT NULL,
     	"Company" VARCHAR NOT NULL,
     	"Country" VARCHAR,
 	"Founded" VARCHAR,
 	"Closed" VARCHAR,
 	"Views" VARCHAR NOT NULL,
 	"Ranking" VARCHAR NOT NULL,
-	"Votes" VARCHAR,
-	"Wishlist" VARCHAR,
+	"Votes" INT,
+	"Wishlist" INT,
     	"Rating" NUMERIC(5,2),
-	"Whisky" VARCHAR,
-	"Collection" VARCHAR,
-    	"Lat" INT NOT NULL,
-    	"Lon" INT NOT NULL
+	"Whisky" INT,
+	"Collection" INT,
+    	lon INT NOT NULL,
+    	lat INT NOT NULL
 );
 
+SELECT * FROM "brand";
+SELECT * FROM "company";
