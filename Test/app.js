@@ -4,10 +4,10 @@ var svgWidth = 1200;
 var svgHeight = 660;
 
 var margin = {
-  top: 50,
-  right: 50,
-  bottom: 50,
-  left: 50
+  top: 20,
+  right: 20,
+  bottom: 70,
+  left: 40
 };
 
 var height = svgHeight - margin.top - margin.bottom;
@@ -23,7 +23,7 @@ var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // Import Data
-d3.csv("data/Whiskey_Brand.csv").then(function(whiskeyData) {
+d3.csv("Whisky_Brand.csv").then(function(whiskeyData) {
 
 	// Step 1: Parse data/cast as numbers
 	whiskeyData.forEach(function(data) {
@@ -87,7 +87,7 @@ d3.csv("data/Whiskey_Brand.csv").then(function(whiskeyData) {
 	chartGroup.append("text")
 		.attr("transform", `translate(${width / 2}, ${height + margin.tip + 30})`)
 		.attr("class", "axisText")
-		.text("Hair Metal Band Hair Length (inches)");
+		.text("Whiskey Information");
 }).catch(function(error) {
 	console.log(error);
 });
