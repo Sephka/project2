@@ -23,26 +23,34 @@ var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // Import Data
-d3.csv("Whisky_Brand.csv").then(function(whiskeyData) {
+d3.json("WhiskeyBrands.json").then(function(whiskeyData) {
 
 	// Step 1: Parse data/cast as numbers
 	whiskeyData.forEach(function(data) {
-		data.Whiskies = +data.Whiskies;
+		data.Whiskies = +data.Whiskies
 		data.Votes = +data.Votes;
 	});
 
-	// Step 2: Create scale functions
-	var xLinearScale = d3.scaleLinear()
-		.domain([20, d3.max(whiskeyData, d => d.Whiskies)])
-		.range([0, width]);
+	// Step 1.5 Filter data to top 10 votes
+	var topData = whiskeyData.sort(function(a,b) {
+		return d3.descending(+a.Votes, +b.Votes);
+	}).slice(0, 10);
 
+	// Step 2: Create scale functions
+	// Band scale for horizontal axis
+	var xBandScale = d3.scaleBand()
+		.domain(topData.map(d => d.Brand))
+		.range([0, width])
+		.padding(0.1);
+
+	// Linear scale for vertical axis
 	var yLinearScale = d3.scaleLinear()
-		.domain([20, d3.max(whiskeyData, d => d.Votes)])
+		.domain([20, d3.max(topData, d => d.Votes)])
 		.range([height, 0]);
 
 	// Step 3: Create axis functions
-	var bottomAxis = d3.axisBottom(xLinearScale);
-	var leftAxis = d3.axisLeft(yLinearScale);
+	var bottomAxis = d3.axisBottom(xBandScale);
+	var leftAxis = d3.axisLeft(yLinearScale).ticks(10);
 
 	// Step 4: Append Axes to the chart
 	chartGroup.append("g")
@@ -53,13 +61,14 @@ d3.csv("Whisky_Brand.csv").then(function(whiskeyData) {
 		.call(leftAxis);
 
 	// Step 5: Create Circles ◘◘◘ Replace with bars/pie chart info
-	var circlesGroup = chartGroup.selectAll("circle")
-	.data(whiskeyData)
+	var barGroup = chartGroup.selectAll(".bar")
+	.data(topData)
 	.enter()
-	.append("circle")
-	.attr("cx", d => xLinearScale(d.Whiskies))
-	.attr("cy", d => xLinearScale(d.Votes))
-	.attr("r", "15")
+	.append("rect")
+	.attr("x", d => xBandScale(d.Brand))
+	.attr("y", d => yLinearScale(d.Votes))
+	.attr("width", xBandScale.bandwidth())
+	.attr("height", d => height - yLinearScale(d.Votes))
 	.attr("fill", "brown")
 	.attr("opacity", ".5");
 
@@ -75,7 +84,7 @@ d3.csv("Whisky_Brand.csv").then(function(whiskeyData) {
 	chartGroup.call(toolTip);
 
 	// Step 8: Create event listeners to display and hide the tooltip
-	circlesGroup.on("click", function(data) {
+	barGroup.on("click", function(data) {
 		toolTip.show(data, this);
 	})
 		// onmouseout event
@@ -85,7 +94,7 @@ d3.csv("Whisky_Brand.csv").then(function(whiskeyData) {
 
 	// Create axes labels
 	chartGroup.append("text")
-		.attr("transform", `translate(${width / 2}, ${height + margin.tip + 30})`)
+		.attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
 		.attr("class", "axisText")
 		.text("Whiskey Information");
 }).catch(function(error) {
