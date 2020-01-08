@@ -42,7 +42,7 @@ d3.csv("Whisky_Brand.csv").then(function(whiskeyData) {
 
 	// Step 3: Create axis functions
 	var bottomAxis = d3.axisBottom(xLinearScale);
-	var LeftAxis = d3.axisLeft(yLinearScale);
+	var leftAxis = d3.axisLeft(yLinearScale);
 
 	// Step 4: Append Axes to the chart
 	chartGroup.append("g")
@@ -75,7 +75,7 @@ d3.csv("Whisky_Brand.csv").then(function(whiskeyData) {
 	chartGroup.call(toolTip);
 
 	// Step 8: Create event listeners to display and hide the tooltip
-	circlesGroup.on("hover", function(data) {
+	circlesGroup.on("click", function(data) {
 		toolTip.show(data, this);
 	})
 		// onmouseout event
@@ -87,7 +87,7 @@ d3.csv("Whisky_Brand.csv").then(function(whiskeyData) {
 	chartGroup.append("text")
 		.attr("transform", `translate(${width / 2}, ${height + margin.tip + 30})`)
 		.attr("class", "axisText")
-		.text("Hair Metal Band Hair Length (inches)");
+		.text("Whiskey Information");
 }).catch(function(error) {
 	console.log(error);
 });
