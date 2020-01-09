@@ -1,31 +1,34 @@
+//set margin & radius
+var margin ={top:20, right: 20, bottom: 20, left:20}
+    width = 500 - margin.right - margin.left,
+    height = 500 - margin.top - margin.bottom,
+    radius = width/2;
 
-// SVG wrapper dimensions are determined by the current width
-// and height of the browser window.
-var svgWidth = 1200;
-var svgHeight = 660;
+//create arc generator and pie generator
 
-var margin = {
-  top: 20,
-  right: 20,
-  bottom: 70,
-  left: 40
-};
+var arc = d3.arc()
+    .outerRadius(radius - 10)
+    .innerRadius(0);
 
-var height = svgHeight - margin.top - margin.bottom;
-var width = svgWidth - margin.left - margin.right;
+var labelArc = d3.arc()
+    .outerRadius(radius - 50)
+    .innerRadius(radius - 50);
 
-// Create an SVG wrapper, append an SVG group that will hold our chart, and shift the latter by left and top margins.
-var svg = d3.select(".chart")
-  .append("svg")
-  .attr("width", svgWidth)
-  .attr("height", svgHeight);
+var pie = d3.pie()
+    .sort(null)
+    .value(function(d) { return d.Whiskies; });
 
-var chartGroup = svg.append("g")
-  .attr("transform", `translate(${margin.left}, ${margin.top})`);
+//define svg
 
-// Import Data
-d3.csv("Whisky_Brand.csv").then(function(whiskeyData) {
-    if(error) throw error;
+var svg = d3.select("body")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .append("g")
+    .attr("transform", "translate(" + radius + "," + height/2 + ")";
+
+//import data
+d3.csv("Whisky_Brand.csv").then(function(whiskeyData){
 
     //parse data
     data.foreach(function(d){
@@ -34,7 +37,7 @@ d3.csv("Whisky_Brand.csv").then(function(whiskeyData) {
     });
 
     var g = svg.selectAll(".arc")
-        .data(pie(data))
+        .data(pie(whiskeyData))
         .enter()
         .append("g")
         .attr("class", "arc");
@@ -48,37 +51,7 @@ d3.csv("Whisky_Brand.csv").then(function(whiskeyData) {
     //append the text
 
     g.append("text")
-        .attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")")})
+        .attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
         .attr("dy"), ".35em"
-        .text(function(d) {return d.data.Whiskies})
-    
-
-
-	// Step 6: Initialize tool tip
-	var toolTip = d3.tip()
-		.attr("class", "tooltip")
-		.offset([80, -60])
-		.html(function(d) {
-			return (`${d.Brand}<br>Whiskies: ${d.Whiskies}<br>Votes: ${d.Votes}`);
-		});
-
-	// Step 7: Create tooltip in the chart
-	chartGroup.call(toolTip);
-
-	// Step 8: Create event listeners to display and hide the tooltip
-	circlesGroup.on("click", function(data) {
-		toolTip.show(data, this);
-	})
-		// onmouseout event
-		.on("mouseout", function(data, index) {
-			toolTip.hide(data);
-		});
-
-	// Create axes labels
-	chartGroup.append("text")
-		.attr("transform", `translate(${width / 2}, ${height + margin.tip + 30})`)
-		.attr("class", "axisText")
-		.text("Whiskey Information");
-}).catch(function(error) {
-	console.log(error);
+        .text(function(d) {return d.whiskeyData.Whiskies})
 });
