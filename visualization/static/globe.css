@@ -1,97 +1,13 @@
-.dg select {
-    width: auto;
-    height: auto;
-    border: none;
-    color: #000;
-    font: 11px 'Lucida Grande', sans-serif
-}
-.dg input {
-    box-shadow: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    border-radius: 0;
-    font: 11px 'Lucida Grande', sans-serif;
-}
-.locations {
-    text-align: center;
-    margin: 20px;
-}
+/* globe css */
 
-#projs {
-    position: static;
-    top: 130px;
-    left: 40px;
-}
-#map-parent {
-    position: static;
-    left: 130px;
-}
-#projs li {
-    color: #0066CC;
-    text-decoration: underline;
-    cursor: pointer;
-    margin: 20;
-    padding: 20;
-    font-family: Helvetica Neue;
-    font-size: 14px;
-    line-height: 18px;
-}
-#projs li:hover {
-    background: #ddd;
-}
-#projs li.sel {
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-}
-html body {
-    padding:50!important; margin:50!important;
-    overflow: scroll;
-}
+#chartdiv {
+    max-width: 100%;
+    height: 600px;
+    background-color:#5f788a;
+  }
 
-/* globe control */
-.k-gui .dg {
-	color: #000;
-	text-shadow: 0 1px 0 #ccc;
-}
-.k-gui .dg .c input[type="text"] {
-	background-color: #DDD;
-}
-.k-gui .dg .cr.number input[type="text"] {
-	color: #356;
-	height: 12px;
-}
-.k-gui .dg .c .slider {
-	background-color: #ddd;
-}
-.k-gui .dg .c:hover .slider {
-	background-color: #fff;
-}
-.k-gui .dg .close-button {
-	display: none;
-}
-.k-gui .dg li:not(.folder) {
-	background: #eee;
-	border-bottom: 1px solid #ccc;
-}
-.k-gui .dg .save-row {
-    border-radius: 6px 6px 0 0;
-}
-.k-gui .dg .save-row select {
-	margin-top: 6px;
-}
-.k-gui .dg .cr.boolean:hover {
-	background: #ddd;
-}
-
-.k-gui .dg .c input[type="checkbox"] {
-	margin-top: 0;
-}
-.k-gui .dg .closed li.title {
-	background-image: none;
-	background-color: #e4e4e4;
-}
-.k-gui .dg .cr.number input[type="text"]:hover,
-.k-gui .dg .cr.number input[type="text"]:focus {
-	color: #eee;
+.inset {
+    border-style: inset;
+    border-width: thick;
+    border-radius: 8px;
 }
