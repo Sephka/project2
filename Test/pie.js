@@ -25,15 +25,14 @@ var svg = d3.select("body")
     .attr("width", width)
     .attr("height", height)
     .append("g")
-    .attr("transform", "translate(" + radius + "," + height/2 + ")";
+    .attr("transform", "translate(" + width/2 + "," + height/2 + ")");
 
 //import data
 d3.csv("Whisky_Brand.csv").then(function(whiskeyData){
-
-    //parse data
-    data.foreach(function(d){
+//d3.csv("Whisky_Brand.csv", function(whiskeyData){
+    whiskeyData.forEach(function(d){
         d.Whiskies = +d.Whiskies;
-        d.Votes = +d.Votes;
+        d.Votes = +d.Country;
     });
 
     var g = svg.selectAll(".arc")
@@ -51,7 +50,7 @@ d3.csv("Whisky_Brand.csv").then(function(whiskeyData){
     //append the text
 
     g.append("text")
-        .attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
-        .attr("dy"), ".35em"
-        .text(function(d) {return d.whiskeyData.Whiskies})
-});
+        .attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
+        .attr("dy", ".35em")
+        .text(function(d) {return d.whiskeyData.Country;} );
+})
