@@ -16,35 +16,6 @@ am4core.ready(function() {
         chart.raiseCriticalError(new Error("Map geodata could not be loaded. Please download the latest <a href=\"https://www.amcharts.com/download/download-v4/\">amcharts geodata</a> and extract its contents into the same directory as your amCharts files."));
     }
     
-    
-    var label = chart.createChild(am4core.Label)
-    // label.text = "12 months (3/7/2019 data) rolling measles\nincidence per 1'000'000 total population. \n Bullet size uses logarithmic scale.";
-    label.fontSize = 12;
-    label.align = "left";
-    label.valign = "bottom"
-    label.fill = am4core.color("#927459");
-    label.background = new am4core.RoundedRectangle()
-    label.background.cornerRadius(10,10,10,10);
-    label.padding(10,10,10,10);
-    label.marginLeft = 30;
-    label.marginBottom = 30;
-    label.background.strokeOpacity = 0.3;
-    label.background.stroke =am4core.color("#927459");
-    label.background.fill = am4core.color("ceddf9");
-    label.background.fillOpacity = 0.6;
-    
-    var dataSource = chart.createChild(am4core.TextLink)
-    // dataSource.text = "Data source: WHO";
-    dataSource.fontSize = 12;
-    dataSource.align = "left";
-    dataSource.valign = "top"
-    dataSource.url = "https://www.who.int/immunization/monitoring_surveillance/burden/vpd/surveillance_type/active/measles_monthlydata/en/"
-    dataSource.urlTarget = "_blank";
-    dataSource.fill = am4core.color("#927459");
-    dataSource.padding(10,10,10,10);
-    dataSource.marginLeft = 30;
-    dataSource.marginTop = 30;
-    
     // Set projection
     chart.projection = new am4maps.projections.Orthographic();
     chart.panBehavior = "rotateLongLat";
@@ -66,7 +37,8 @@ am4core.ready(function() {
     homeButton.parent = chart.zoomControl;
     homeButton.insertBefore(chart.zoomControl.plusButton);
     
-    chart.backgroundSeries.mapPolygons.template.polygon.fill = am4core.color("#bfa58d");
+    // ocean fill
+    chart.backgroundSeries.mapPolygons.template.polygon.fill = am4core.color("#8dabbf"); 
     chart.backgroundSeries.mapPolygons.template.polygon.fillOpacity = 1;
     chart.deltaLongitude = 20;
     chart.deltaLatitude = -20;
@@ -106,10 +78,11 @@ am4core.ready(function() {
     polygonSeries.tooltip.background.fillOpacity = 0.2;
     polygonSeries.tooltip.background.cornerRadius = 20;
     
+    // land fill
     var template = polygonSeries.mapPolygons.template;
     template.nonScalingStroke = true;
-    template.fill = am4core.color("#f9e3ce");
-    template.stroke = am4core.color("#e2c9b0");
+    template.fill = am4core.color("#1b4182");
+    template.stroke = am4core.color("#000");
     
     polygonSeries.calculateVisualCenter = true;
     template.propertyFields.id = "id";
@@ -138,34 +111,35 @@ am4core.ready(function() {
     graticuleSeries.mapLines.template.strokeOpacity = 0.2;
     graticuleSeries.mapLines.template.stroke = am4core.color("#fff");
     
+    // distillary data popup 
+    var distillaries = chart.series.push(new am4maps.MapPolygonSeries())
+    distillaries.tooltip.background.fillOpacity = 0.2;
+    distillaries.tooltip.background.cornerRadius = 20;
+    distillaries.tooltip.autoTextColor = false;
+    distillaries.tooltip.label.fill = am4core.color("#fff");
+    distillaries.tooltip.dy = -5;
     
-    var measelsSeries = chart.series.push(new am4maps.MapPolygonSeries())
-    measelsSeries.tooltip.background.fillOpacity = 0;
-    measelsSeries.tooltip.background.cornerRadius = 20;
-    measelsSeries.tooltip.autoTextColor = false;
-    measelsSeries.tooltip.label.fill = am4core.color("#000");
-    measelsSeries.tooltip.dy = -5;
-    
-    var measelTemplate = measelsSeries.mapPolygons.template;
-    measelTemplate.fill = am4core.color("#bf7569");
-    measelTemplate.strokeOpacity = 0;
-    measelTemplate.fillOpacity = 0.75;
-    measelTemplate.tooltipPosition = "fixed";
+    // distillery markers
+    var distillariesTemplate = distillaries.mapPolygons.template;
+    distillariesTemplate.fill = am4core.color("#e3380e");
+    distillariesTemplate.strokeOpacity = 0;
+    distillariesTemplate.fillOpacity = 0.75;
+    distillariesTemplate.tooltipPosition = "fixed";
     
     
     
-    var hs2 = measelsSeries.mapPolygons.template.states.create("hover");
+    var hs2 = distillaries.mapPolygons.template.states.create("hover");
     hs2.properties.fillOpacity = 1;
-    hs2.properties.fill = am4core.color("#86240c");
+    hs2.properties.fill = am4core.color("#767b87");
     
     polygonSeries.events.on("inited", function () {
       polygonSeries.mapPolygons.each(function (mapPolygon) {
         var count = data[mapPolygon.id];
     
         if (count > 0) {
-          var polygon = measelsSeries.mapPolygons.create();
+          var polygon = distillaries.mapPolygons.create();
           polygon.multiPolygon = am4maps.getCircle(mapPolygon.visualLongitude, mapPolygon.visualLatitude, Math.max(0.2, Math.log(count) * Math.LN10 / 10));
-          polygon.tooltipText = mapPolygon.dataItem.dataContext.name + ": " + count;
+          polygon.tooltipText = mapPolygon.dataItem.dataContext.name + ": avg. " + count;
           mapPolygon.dummyData = polygon;
           polygon.events.on("over", function () {
             mapPolygon.isHover = true;
@@ -175,18 +149,13 @@ am4core.ready(function() {
           })
         }
         else {
-          mapPolygon.tooltipText = mapPolygon.dataItem.dataContext.name + ": no data";
+          mapPolygon.tooltipText = mapPolygon.dataItem.dataContext.name + ": no distillaries";
           mapPolygon.fillOpacity = 0.9;
         }
     
       })
     })
     
-    var data = {
-        "AU": 66.5,
-
-    }
-
     var data = {
         "AU": 66.5, 
         "AT": 56.25, 
@@ -212,7 +181,7 @@ am4core.ready(function() {
         "LI": 77.7, 
         "LU": 69.64, 
         "MX": 81, 
-        "NP": 0, 
+        "NP": 0.01, 
         "NL": 64.42, 
         "AN": 65.75, 
         "NZ": 67.33, 
@@ -221,7 +190,7 @@ am4core.ready(function() {
         "PH": 19.67, 
         "PL": 59.99, 
         "RU": 58.17, 
-        "GB": 0, 
+        "GB": 0.01, 
         "CS": 61.67, 
         "SK": 74.09, 
         "ZA": 78.94, 
