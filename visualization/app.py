@@ -10,11 +10,11 @@ def Home():
 
 @app.route("/PopBrands")
 def Graph1():
-    return render_template('graph1.html', title="Most Popular Brands By Votes")
+    return render_template('PopBrands.html', title="Most Popular Brands By Votes")
 
 @app.route("/DistilleryMap")
 def Graph3():
-    return render_template('graph3.html', title="Distillery Map")
+    return render_template('DistilleryMap.html', title="Distillery Map")
 
 
 
