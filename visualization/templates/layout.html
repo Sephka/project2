@@ -34,52 +34,50 @@
         <title>Distillery Data</title>
     </head>
     <body>
-            <header class="site-header">
-                    <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
-                      <div class="container">
-                        <a class="navbar-brand mr-4" href="/">Distillery Data</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarToggle">
-                          <div class="navbar-nav mr-auto">
-                            <a class="nav-item nav-link" href="/">Home</a>
-                            
-                          </div>
-                          <!-- Navbar Right Side -->
-                          <div class="navbar-nav">
-                                <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                          Graphs
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                          <a class="dropdown-item" href="http://127.0.0.1:5000/graph1">Graph1</a>
-                                          <a class="dropdown-item" href="http://127.0.0.1:5000/graph2">Graph2</a>
-                                          <a class="dropdown-item" href="http://127.0.0.1:5000/graph3">Graph3</a>
-                                        </div>
-                                      </div>
-                                
-                          </div>
-                        </div>
-                      </div>
-                    </nav>
-                  </header> 
-                  <main role="main" class="container">
-                        <div class="row">
-                          <div class="col-md-8">
-                            {% block content %}{% endblock %}
-                          </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="content-section">
-                              <h3>Our Sidebar</h3>
-                              <p class='text-muted'>Data Columns will go here
-                                
-                              </p>
+          <header class="site-header">
+              <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+                <div class="container">
+                  <a class="navbar-brand mr-4" href="/">Distillery Data</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarToggle">
+                    <div class="navbar-nav mr-auto">
+                      <a class="nav-item nav-link" href="/">Home</a>
+                      
+                    </div>
+                    <!-- Navbar Right Side -->
+                    <div class="navbar-nav">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Graphs
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="http://127.0.0.1:5000/graph1">Graph1</a>
+                              <a class="dropdown-item" href="http://127.0.0.1:5000/graph2">Graph2</a>
+                              <a class="dropdown-item" href="http://127.0.0.1:5000/graph3">Graph3</a>
                             </div>
-                          </div>
                         </div>
-                      </main>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </header> 
+            <main role="main" class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                      {% block content %}{% endblock %}
+                    </div>
+                </div>
+                  <div class="col-md-4">
+                    <div class="content-section">
+                      <h3>Our Sidebar</h3>
+                      <p class='text-muted'>Data Columns will go here
+                        
+                      </p>
+                    </div>
+                  </div>
+            </main>
         <!-- Optional JavaScript -->
 <!--         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script type="text/javascript" src="../../app.js"></script> -->
