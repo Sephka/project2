@@ -7,7 +7,7 @@
   }
 
 .solid {
-    border-style: inset;
+    border-style: solid;
     border-width: medium;
     border-radius: 8px;
 }
