@@ -8,17 +8,13 @@ app = Flask(__name__)
 def Home():
     return render_template('home.html', title="Home page")
 
-@app.route("/graph1")
+@app.route("/PopBrands")
 def Graph1():
-    return render_template('graph1.html', title="graph1")
+    return render_template('graph1.html', title="Most Popular Brands By Votes")
 
-@app.route("/graph2")
-def Graph2():
-    return render_template('graph2.html', title="graph2")
-
-@app.route("/graph3")
+@app.route("/DistilleryMap")
 def Graph3():
-    return render_template('graph3.html', title="graph3")
+    return render_template('graph3.html', title="Distillery Map")
 
 
 
