@@ -23,11 +23,6 @@ var map = L.map("map", {
   ]
 });
 
-$(window).on(“resize”, function() {
-  $(“#map”).height($(window).height()).width($(window).width());
-  map.invalidateSize();
-}).trigger(“resize”);
-
 darkMap.addTo(map);
 
 var overlays = {
