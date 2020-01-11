@@ -7,6 +7,10 @@ body,
   height: 825px;
 }
 
+body {
+  background-image: url(../static/JD.jpg);
+}
+
 .legend {
   padding: 8px;
   font-family: OCR A Std, monospace;
@@ -47,4 +51,8 @@ body,
   font-weight: bold;
   fill: #551aaf;
   text-anchor: middle;
+}
+
+.chart {
+  background-color: rgb(200, 199, 199);
 }
