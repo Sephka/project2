@@ -1,12 +1,12 @@
 from flask import Flask, render_template
 from flask import redirect, request, jsonify, url_for
-
+print("Hello World!")
 app = Flask(__name__)
 
 @app.route("/")
 @app.route("/home")
 def Home():
-    return render_template('home.html', title="Home page")
+    return render_template('index.html', title="Home page")
 
 @app.route("/PopBrands")
 def Graph1():
