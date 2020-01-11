@@ -6,8 +6,8 @@
     background-color:#5f788a;
   }
 
-.inset {
+.solid {
     border-style: inset;
-    border-width: thick;
+    border-width: medium;
     border-radius: 8px;
 }
