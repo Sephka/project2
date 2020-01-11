@@ -61,7 +61,7 @@ var icons = {
   })
 };
 
-d3.json("distillery.json", function(data) {
+d3.json("../static/distillery.json", function(data) {
   console.log(data);
   
   data.forEach(distillery => {
