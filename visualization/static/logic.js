@@ -15,9 +15,8 @@ am4core.ready(function() {
     catch (e) {
         chart.raiseCriticalError(new Error("Map geodata could not be loaded. Please download the latest <a href=\"https://www.amcharts.com/download/download-v4/\">amcharts geodata</a> and extract its contents into the same directory as your amCharts files."));
     }
-    
     // Set projection
-    chart.projection = new am4maps.projections.Orthographic();
+    chart.projection  = new am4maps.projections.Orthographic();
     chart.panBehavior = "rotateLongLat";
     chart.padding(20,20,20,20);
     
@@ -81,7 +80,7 @@ am4core.ready(function() {
     // land fill
     var template = polygonSeries.mapPolygons.template;
     template.nonScalingStroke = true;
-    template.fill = am4core.color("#1b4182");
+    template.fill   = am4core.color("#1b4182");
     template.stroke = am4core.color("#000");
     
     polygonSeries.calculateVisualCenter = true;
@@ -120,7 +119,7 @@ am4core.ready(function() {
     distillaries.tooltip.dy = -5;
     
     // distillery markers
-    var distillariesTemplate = distillaries.mapPolygons.template;
+    var distillariesTemplate  = distillaries.mapPolygons.template;
     distillariesTemplate.fill = am4core.color("#e3380e");
     distillariesTemplate.strokeOpacity = 0;
     distillariesTemplate.fillOpacity = 0.75;
@@ -139,7 +138,7 @@ am4core.ready(function() {
         if (count > 0) {
           var polygon = distillaries.mapPolygons.create();
           polygon.multiPolygon = am4maps.getCircle(mapPolygon.visualLongitude, mapPolygon.visualLatitude, Math.max(0.2, Math.log(count) * Math.LN10 / 10));
-          polygon.tooltipText = mapPolygon.dataItem.dataContext.name + ": avg. " + count;
+          polygon.tooltipText  = mapPolygon.dataItem.dataContext.name + ": avg. " + count;
           mapPolygon.dummyData = polygon;
           polygon.events.on("over", function () {
             mapPolygon.isHover = true;
