@@ -23,7 +23,7 @@ var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // Import Data
-d3.json("WhiskeyBrands.json").then(function(whiskeyData) {
+d3.json("../static/WhiskeyBrands.json", function(whiskeyData) {
 
 	// Step 1: Parse data/cast as numbers
 	whiskeyData.forEach(function(data) {
@@ -107,6 +107,4 @@ d3.json("WhiskeyBrands.json").then(function(whiskeyData) {
 		.attr("transform", `translate(${width / 2}, ${height + margin.top + 50})`)
 		.attr("class", "axisText")
 		.text("Whiskey Brands by Votes");
-}).catch(function(error) {
-	console.log(error);
-});
+})

@@ -28,27 +28,24 @@ d3.json("WhiskeyBrands.json").then(function(whiskeyData) {
 	// Step 1: Parse data/cast as numbers
 	whiskeyData.forEach(function(data) {
 		data.Whiskies = +data.Whiskies
-		data.Votes = +data.Votes
-		data.Rating = +data.Rating;
+		data.Votes = +data.Votes;
 	});
 
 	// Step 1.5 Filter data to top 10 votes
-	var topDataVotes = whiskeyData.sort(function(a,b) {
+	var topData = whiskeyData.sort(function(a,b) {
 		return d3.descending(+a.Votes, +b.Votes);
-	}).slice(0, 20);
+	}).slice(0, 10);
 
 	// Step 2: Create scale functions
 	// Band scale for horizontal axis
 	var xBandScale = d3.scaleBand()
-		.domain(topDataVotes.map(d => d.Brand))
+		.domain(topData.map(d => d.Brand))
 		.range([0, width])
 		.padding(0.1);
 
 	// Linear scale for vertical axis
 	var yLinearScale = d3.scaleLinear()
-		.domain([d3.min(topDataVotes, d => d.Votes) * 0.8, 
-			d3.max(topDataVotes, d => d.Votes)
-			])
+		.domain([20, d3.max(topData, d => d.Votes)])
 		.range([height, 0]);
 
 	// Step 3: Create axis functions
@@ -57,37 +54,30 @@ d3.json("WhiskeyBrands.json").then(function(whiskeyData) {
 
 	// Step 4: Append Axes to the chart
 	chartGroup.append("g")
-		.attr("class", "x axis")
 		.attr("transform", `translate(0, ${height})`)
-		.call(bottomAxis)
-		.selectAll("text")
-			.style("text-anchor", "end")
-			.attr("dx", "-.8em")
-			.attr("dy", "-.15em")
-			.attr("transform", "rotate(-35)");
+		.call(bottomAxis);
 
 	chartGroup.append("g")
-		.attr("class", "y axis")
 		.call(leftAxis);
 
-	// Step 5: Create Bars
+	// Step 5: Create Circles ◘◘◘ Replace with bars/pie chart info
 	var barGroup = chartGroup.selectAll(".bar")
-		.data(topDataVotes)
-		.enter()
-		.append("rect")
-		.attr("x", d => xBandScale(d.Brand))
-		.attr("y", d => yLinearScale(d.Votes))
-		.attr("width", xBandScale.bandwidth())
-		.attr("height", d => height - yLinearScale(d.Votes))
-		.attr("fill", "#A94007")
-		.attr("opacity", ".5");
+	.data(topData)
+	.enter()
+	.append("rect")
+	.attr("x", d => xBandScale(d.Brand))
+	.attr("y", d => yLinearScale(d.Votes))
+	.attr("width", xBandScale.bandwidth())
+	.attr("height", d => height - yLinearScale(d.Votes))
+	.attr("fill", "brown")
+	.attr("opacity", ".5");
 
 	// Step 6: Initialize tool tip
 	var toolTip = d3.tip()
 		.attr("class", "tooltip")
 		.offset([80, -60])
 		.html(function(d) {
-			return (`${d.Brand}<br>Whiskies: ${d.Whiskies}<br>Ratings: ${d.Rating}`);
+			return (`${d.Brand}<br>Whiskies: ${d.Whiskies}<br>Votes: ${d.Votes}`);
 		});
 
 	// Step 7: Create tooltip in the chart
@@ -102,11 +92,11 @@ d3.json("WhiskeyBrands.json").then(function(whiskeyData) {
 			toolTip.hide(data);
 		});
 
-	// Create Label
+	// Create axes labels
 	chartGroup.append("text")
-		.attr("transform", `translate(${width / 2}, ${height + margin.top + 50})`)
+		.attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
 		.attr("class", "axisText")
-		.text("Whiskey Brands by Votes");
+		.text("Whiskey Information");
 }).catch(function(error) {
 	console.log(error);
 });
