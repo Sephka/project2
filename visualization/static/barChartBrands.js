@@ -1,13 +1,13 @@
 // SVG wrapper dimensions are determined by the current width
 // and height of the browser window.
-var svgWidth = 980;
+var svgWidth = 750;
 var svgHeight = 600;
 
 var margin = {
   top: 20,
   right: 40,
   bottom: 90,
-  left: 20
+  left: 40
 };
 
 var height = svgHeight - margin.top - margin.bottom;
