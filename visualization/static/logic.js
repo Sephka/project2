@@ -1,275 +1,239 @@
-var GlobeOpt = function() {
-    this.lon0       = 20;
-    this.lat0       = 35;
-    this.lat1       = 30;
-    this.lat2       = 50;
-    this.dist       = 2;
-    this.up         = 0;
-    this.tilt       = 0;
-    this.proj       = 'ortho';
-    this.projstr    = '+proj=lcc +lat_1=44.1 +lat_0=44.1 +lon_0=0 +k_0=0.999877499 +x_0=600000 +y_0=200000 +a=6378249.2 +b=6356515 +towgs84=-168,-60,320,0,0,0,0 +pm=paris +units=m',
-    this.offsetx    = 0;
-    this.offsety    = 0;
-    this.startx     = 0;
-    this.starty     = 0;
-    this.deltalon   = 0;
-    this.deltalat   = 0;
-    this.isdragged  = false;
-    this.firstclick = true;
-};
+am4core.ready(function() {
 
-var globeopt = new GlobeOpt();
-var url = location.href.split('#');
-if (url.length>1) globeopt.proj = url[1];
-$(function() {
-    var P,
-    createCanvas = function(id,w,h) {
-        if (document.getElementById(id) != null) {
-            var ctx = document.getElementById(id).getContext("2d");
-            ctx.clearRect(0,0,w,h+20);
-            return ctx;
-        }
-        var canvas = document.createElement("canvas");
-        canvas.setAttribute("id", id);
-        canvas.setAttribute("width", w+"px");
-        canvas.setAttribute("height", h+"px");
-        $('#map-parent').append(canvas);
-        var ctx = canvas.getContext("2d");
-        return ctx;
-    },
-    showMap = function(p, coastlines) {
-        P = new kartograph.proj[p](globeopt);
-        xy = P.project(13,14);
-        if (isNaN(xy[0]) || isNaN(xy[1])) {
-            console.error(p, P, xy);
-            return;
-        };
-        var
-        lon, lat, i,
-        w    = $('#map-parent').width(),
-        h    = 600,
-        grat = 15,
-        sea  = P.sea(),
-        bbox = P.world_bbox(),
-        view,
-        ctx  = createCanvas("proj", w,h+20),
-        len  = ctx.measureText(p.toUpperCase()).width;
-        ctx.beginPath();
-        ctx.fillStyle ="#fff";
-        view = new kartograph.View(bbox, w, h, 10);
-        for (i=0;i<sea.length;i++) {
-            xy = view.project(sea[i]);
-            if (i==0) ctx.moveTo(xy[0], xy[1]);
-            else ctx.lineTo(xy[0], xy[1]);
-        }
-        ctx.stroke();
-        ctx.fill();
-        ctx.lineWidth = 0.2;
-        ctx.beginPath();
-        // graticule
-        for (lat=0;lat<90;lat+=grat) {
-            var lats = lat == 0 ? [0] : [lat,-lat];
-            for (var l in lats) {
-                var lat_ = lats[l];
-                var line = [];
-                for (lon=-180;lon<180;lon++) {
-                    line.push([lon,lat_]);
-                }
-                for (var i=0;i<line.length-1;i++) {
-                    p0 = line[i];
-                    p1 = line[i+1];
-                    d = P.clon ? Math.abs(P.clon(p0[0])-P.clon(p1[0])) : 0;
-                    if (P._visible(p0[0],p0[1]) && P._visible(p1[0],p1[1]) && d < 30) {
-                        p0 = view.project(P.project(p0[0],p0[1]));
-                        p1 = view.project(P.project(p1[0],p1[1]));
-                        ctx.moveTo(p0[0],p0[1]);
-                        ctx.lineTo(p1[0],p1[1]);
-                    }
-                }
-            }
-        }
-        // graticule
-        for (lon=0;lon<181;lon+=grat) {
-            var lons = lon == 0 || lon == 180 ? [lon] : [lon,-lon];
-            $.each(lons, function(l, lon_) {
-                var line = [];
-                for (lat=-90+(lon % 90 == 0 ? 0 : grat);lat<90-(lon%90 == 0 ? 0 : grat)+1;lat+=0.25) {
-                    line.push([lon_,lat]);
-                }
-                for (var i=0;i<line.length-1;i++) {
-                    p0 = line[i];
-                    p1 = line[i+1];
-                    d  = P.clon ? Math.abs(P.clon(p0[0])-P.clon(p1[0])) : 0;
-                    if (P._visible(p0[0],p0[1]) && P._visible(p1[0],p1[1]) && d < 100) {
-                        p0 = view.project(P.project(p0[0],p0[1]));
-                        p1 = view.project(P.project(p1[0],p1[1]));
-                        ctx.moveTo(p0[0],p0[1]);
-                        ctx.lineTo(p1[0],p1[1]);
-                    }
-                }
-            });
-        }
-        ctx.stroke();
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        var cl,line,p0,p1,d;
-        for (cl=0; cl<coastlines.length; cl++) {
-            line = coastlines[cl];
-            for (i=0;i<line.length-1;i++) {
-                p0 = line[i];
-                p1 = line[i+1];
-                d = P.clon ? Math.abs(P.clon(p0[0])-P.clon(p1[0])) : 0;
-                if (P._visible(p0[0],p0[1]) && P._visible(p1[0],p1[1]) && d < 100) {
-                    p0 = view.project(P.project(p0[0],p0[1]));
-                    p1 = view.project(P.project(p1[0],p1[1]));
-                    ctx.moveTo(p0[0],p0[1]);
-                    ctx.lineTo(p1[0],p1[1]);
-                }
-            }
-        }
-        ctx.stroke();
-    },
-    frame = 0,
-    renderFrame = function() {
-        showMap(globeopt.proj, coastlines);
-        // Iterate over all controllers
-    };
-    $.getJSON('https://raw.githubusercontent.com/kartograph/kartograph.org/master/showcase/projections/coastline.json', function(coastlines) {
-        window.coastlines = coastlines;
-        renderFrame();
+    // Themes begin
+    am4core.useTheme(am4themes_dataviz);
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+    
+    // Create map instance
+    var chart = am4core.create("chartdiv", am4maps.MapChart);
+    var interfaceColors = new am4core.InterfaceColorSet();
+    
+    try {
+        chart.geodata = am4geodata_worldLow;
+    }
+    catch (e) {
+        chart.raiseCriticalError(new Error("Map geodata could not be loaded. Please download the latest <a href=\"https://www.amcharts.com/download/download-v4/\">amcharts geodata</a> and extract its contents into the same directory as your amCharts files."));
+    }
+    
+    
+    var label = chart.createChild(am4core.Label)
+    // label.text = "12 months (3/7/2019 data) rolling measles\nincidence per 1'000'000 total population. \n Bullet size uses logarithmic scale.";
+    label.fontSize = 12;
+    label.align = "left";
+    label.valign = "bottom"
+    label.fill = am4core.color("#927459");
+    label.background = new am4core.RoundedRectangle()
+    label.background.cornerRadius(10,10,10,10);
+    label.padding(10,10,10,10);
+    label.marginLeft = 30;
+    label.marginBottom = 30;
+    label.background.strokeOpacity = 0.3;
+    label.background.stroke =am4core.color("#927459");
+    label.background.fill = am4core.color("ceddf9");
+    label.background.fillOpacity = 0.6;
+    
+    var dataSource = chart.createChild(am4core.TextLink)
+    // dataSource.text = "Data source: WHO";
+    dataSource.fontSize = 12;
+    dataSource.align = "left";
+    dataSource.valign = "top"
+    dataSource.url = "https://www.who.int/immunization/monitoring_surveillance/burden/vpd/surveillance_type/active/measles_monthlydata/en/"
+    dataSource.urlTarget = "_blank";
+    dataSource.fill = am4core.color("#927459");
+    dataSource.padding(10,10,10,10);
+    dataSource.marginLeft = 30;
+    dataSource.marginTop = 30;
+    
+    // Set projection
+    chart.projection = new am4maps.projections.Orthographic();
+    chart.panBehavior = "rotateLongLat";
+    chart.padding(20,20,20,20);
+    
+    // Add zoom control
+    chart.zoomControl = new am4maps.ZoomControl();
+    
+    var homeButton = new am4core.Button();
+    homeButton.events.on("hit", function(){
+      chart.goHome();
     });
-
-    // $.getJSON('distillery.json', function(locations) {
-    //     map.addSymbols({
-    //         type: kartograph.Bubble,
-    //         data: 'distillery.json',
-    //         clustering: 'k-means',
-    //         location: function(locations) { return [locations.lon, locations.lat]; },
-    //         radius: function(d) { return Math.sqrt(city.nb_visits); },
-    //         aggregate: function(cities) {
-    //             var nc = { nb_visits: 0, city_names: [] };
-    //             $.each(cities, function(i, c) {
-    //                 nc.nb_visits += c.nb_visits;
-    //                 nc.city_names = nc.city_names.concat(c.city_names ? c.city_names : [c.city_name]);
-    //             });
-    //             nc.city_name = nc.city_names[0] + ' and ' + (nc.city_names.length-1) + ' others';
-    //             return nc;
-    //         },
-    //         location: function(city) {
-    //             return [city.long, city.lat];
-    //         },
-    //         radius: function(city) {
-    //             return scale(city.nb_visits);
-    //         },
-    //         tooltip: function(city) {
-    //             return '<h3>'+city.city_name+'</h3>'+city.nb_visits+' visits';
-    //         },
-    //         sortBy: 'radius desc',
-    //         style: 'fill:#800; stroke: #fff; fill-opacity: 0.5;',
-    //     });
-
-    //     renderFrame();
-    // });
-
-    $.getJSON('distillery.json', function(locations) {
-        window.locations = locations; 
-        // locations.forEach(obj => {
-        //     Object.entries(obj).forEach([key, value]); 
-        // })
-        console.log(); 
-    });
-
-    window.gui = new dat.GUI({ 
-        autoPlace: false,
-        width: 330,
-        hideable: false,
-        resizable: false
-    });
-    $('.k-gui').append(gui.domElement);
-    gui.remember(globeopt);
-    var proj = [];
-    $.each(kartograph.proj, function(p) {
-        proj.push(p);
+    
+    homeButton.icon = new am4core.Sprite();
+    homeButton.padding(7, 5, 7, 5);
+    homeButton.width = 30;
+    homeButton.icon.path = "M16,8 L14,8 L14,16 L10,16 L10,10 L6,10 L6,16 L2,16 L2,8 L0,8 L8,0 L16,8 Z M16,8";
+    homeButton.marginBottom = 10;
+    homeButton.parent = chart.zoomControl;
+    homeButton.insertBefore(chart.zoomControl.plusButton);
+    
+    chart.backgroundSeries.mapPolygons.template.polygon.fill = am4core.color("#bfa58d");
+    chart.backgroundSeries.mapPolygons.template.polygon.fillOpacity = 1;
+    chart.deltaLongitude = 20;
+    chart.deltaLatitude = -20;
+    
+    // limits vertical rotation
+    chart.adapter.add("deltaLatitude", function(delatLatitude){
+        return am4core.math.fitToRange(delatLatitude, -90, 90);
     })
-    proj = proj.sort();
-    window.projopts = {
-        lon0: [-180,180, 1],
-        lat0: [-90, 90],
-        lat1: [-90, 90],
-        lat2: [-90, 90],
-        dist: [1.01, 10, 0.01],
-        up: [-180,180],
-        tilt: [-40,0],
-        projstr: 'str'
-    };
-    var updateGUI = function() {
-        try {
-            for (var i=gui.__controllers.length-1; i>=0; i--) {
-                gui.remove(gui.__controllers[i]);
-            }
-        } catch (e) {}
-        gui.add(globeopt, 'proj', proj).onChange(function() {
-            updateGUI();
-            renderFrame();
-        });
-        $.each(projopts, function(key, val) {
-            if (kartograph.proj[globeopt.proj].parameters.indexOf(key) >= 0) {
-                var s = val == 'str' ? gui.add(globeopt, key) : gui.add(globeopt, key, val[0], val[1]);
-                if (val != 'str' && val.length == 3) s.step(val[2]);
-                s.onChange(renderFrame);
-            }
-        });
-        // $('#k-proj-title').html(kartograph.proj[globeopt.proj].title);
-        // var url = location.href.split('#');
-        // location.href = url[0]+'#'+globeopt.proj;
-    };
-    updateGUI();
-    $('#map-parent').click(function (e) {
-        globeopt.startx = e.pageX - this.offsetLeft;
-        globeopt.starty = e.pageY - this.offsetTop;
-    });
-    $('#map-parent').mousedown(function (e) {
-        globeopt.isdragged = true;
-    });
-    $('#map-parent').mouseup(function (e) {
-        globeopt.isdragged = false;
-        globeopt.firstclick = true;
-        $('#status2').html((e.pageX - globeopt.offsetx - globeopt.startx) + ', ' + (e.pageY - globeopt.offsety - globeopt.starty));
-    });
-    var latstart = 0,
-        lonstart = 0,
-        lastlat  = 0,
-        lastlon  = 0;
-    $('#map-parent').mousemove(function (e) {
-        globeopt.offsetx = this.offsetLeft;
-        globeopt.offsety = this.offsetTop;
-        $('#status').html(e.pageX + ', ' + e.pageY);
-        if (globeopt.isdragged === true) {
-            lastlat = globeopt.lat0;
-            lastlon = globeopt.lon0;
-            if (globeopt.firstclick === true) {
-                globeopt.startx = e.pageX - globeopt.offsetx;
-                globeopt.starty = e.pageY - globeopt.offsety;
-                latstart = globeopt.lat0;
-                lonstart = globeopt.lon0;
-                globeopt.firstclick = false;
-            }
-            var relx = e.pageX - globeopt.offsetx - globeopt.startx;
-            var rely = e.pageY - globeopt.offsety - globeopt.starty;
-            //$('#status').html(relx +', '+ rely);
-            globeopt.deltalon = (-relx / 4);
-            globeopt.deltalat = (rely / 4);
-            globeopt.lon0 = (lonstart + globeopt.deltalon + 540) % 360 - 180;
-            globeopt.lat0 = latstart + globeopt.deltalat;
-            if (globeopt.lat0 > 90) {globeopt.lat0 = 90; }
-            if (globeopt.lat0 < -90) {globeopt.lat0 = -90; }
-            gui.__controllers[1].updateDisplay();
-            gui.__controllers[2].updateDisplay();
-            // $('#relxystatus').html(globeopt.deltalat +'Â°'+ globeopt.deltalon + 'Â°');
-            $('#latlonstatus').html((Math.floor(globeopt.lat0)) + 'Â°, ' + (Math.floor(globeopt.lon0)) + 'Â°');
-            if (globeopt.lat0 !== lastlat || globeopt.lon0 !== lastlon) {
-                renderFrame();
-            }
+    
+    // Create map polygon series
+    
+    var shadowPolygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+    shadowPolygonSeries.geodata = am4geodata_continentsLow;
+    
+    try {
+        shadowPolygonSeries.geodata = am4geodata_continentsLow;
+    }
+    catch (e) {
+        shadowPolygonSeries.raiseCriticalError(new Error("Map geodata could not be loaded. Please download the latest <a href=\"https://www.amcharts.com/download/download-v4/\">amcharts geodata</a> and extract its contents into the same directory as your amCharts files."));
+    }
+    
+    shadowPolygonSeries.useGeodata = true;
+    shadowPolygonSeries.dx = 2;
+    shadowPolygonSeries.dy = 2;
+    shadowPolygonSeries.mapPolygons.template.fill = am4core.color("#000");
+    shadowPolygonSeries.mapPolygons.template.fillOpacity = 0.2;
+    shadowPolygonSeries.mapPolygons.template.strokeOpacity = 0;
+    shadowPolygonSeries.fillOpacity = 0.1;
+    shadowPolygonSeries.fill = am4core.color("#000");
+    
+    
+    // Create map polygon series
+    var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+    polygonSeries.useGeodata = true;
+    
+    polygonSeries.calculateVisualCenter = true;
+    polygonSeries.tooltip.background.fillOpacity = 0.2;
+    polygonSeries.tooltip.background.cornerRadius = 20;
+    
+    var template = polygonSeries.mapPolygons.template;
+    template.nonScalingStroke = true;
+    template.fill = am4core.color("#f9e3ce");
+    template.stroke = am4core.color("#e2c9b0");
+    
+    polygonSeries.calculateVisualCenter = true;
+    template.propertyFields.id = "id";
+    template.tooltipPosition = "fixed";
+    template.fillOpacity = 1;
+    
+    template.events.on("over", function (event) {
+      if (event.target.dummyData) {
+        event.target.dummyData.isHover = true;
+      }
+    })
+    template.events.on("out", function (event) {
+      if (event.target.dummyData) {
+        event.target.dummyData.isHover = false;
+      }
+    })
+    
+    var hs = polygonSeries.mapPolygons.template.states.create("hover");
+    hs.properties.fillOpacity = 1;
+    hs.properties.fill = am4core.color("#deb7ad");
+    
+    
+    var graticuleSeries = chart.series.push(new am4maps.GraticuleSeries());
+    graticuleSeries.mapLines.template.stroke = am4core.color("#fff");
+    graticuleSeries.fitExtent = false;
+    graticuleSeries.mapLines.template.strokeOpacity = 0.2;
+    graticuleSeries.mapLines.template.stroke = am4core.color("#fff");
+    
+    
+    var measelsSeries = chart.series.push(new am4maps.MapPolygonSeries())
+    measelsSeries.tooltip.background.fillOpacity = 0;
+    measelsSeries.tooltip.background.cornerRadius = 20;
+    measelsSeries.tooltip.autoTextColor = false;
+    measelsSeries.tooltip.label.fill = am4core.color("#000");
+    measelsSeries.tooltip.dy = -5;
+    
+    var measelTemplate = measelsSeries.mapPolygons.template;
+    measelTemplate.fill = am4core.color("#bf7569");
+    measelTemplate.strokeOpacity = 0;
+    measelTemplate.fillOpacity = 0.75;
+    measelTemplate.tooltipPosition = "fixed";
+    
+    
+    
+    var hs2 = measelsSeries.mapPolygons.template.states.create("hover");
+    hs2.properties.fillOpacity = 1;
+    hs2.properties.fill = am4core.color("#86240c");
+    
+    polygonSeries.events.on("inited", function () {
+      polygonSeries.mapPolygons.each(function (mapPolygon) {
+        var count = data[mapPolygon.id];
+    
+        if (count > 0) {
+          var polygon = measelsSeries.mapPolygons.create();
+          polygon.multiPolygon = am4maps.getCircle(mapPolygon.visualLongitude, mapPolygon.visualLatitude, Math.max(0.2, Math.log(count) * Math.LN10 / 10));
+          polygon.tooltipText = mapPolygon.dataItem.dataContext.name + ": " + count;
+          mapPolygon.dummyData = polygon;
+          polygon.events.on("over", function () {
+            mapPolygon.isHover = true;
+          })
+          polygon.events.on("out", function () {
+            mapPolygon.isHover = false;
+          })
         }
+        else {
+          mapPolygon.tooltipText = mapPolygon.dataItem.dataContext.name + ": no data";
+          mapPolygon.fillOpacity = 0.9;
+        }
+    
+      })
+    })
+    
+    var data = {
+        "AU": 66.5,
+
+    }
+
+    var data = {
+        "AU": 66.5, 
+        "AT": 56.25, 
+        "BE": 70.45, 
+        "BT": 77.67, 
+        "CA": 65.23, 
+        "CN": 58, 
+        "CZ": 53.33, 
+        "DK": 61.45, 
+        "EG": 5.63, 
+        "FI": 79.3, 
+        "FR": 70.09, 
+        "DE": 62.64, 
+        "HU": 72, 
+        "IS": 69.08, 
+        "IN": 72.9, 
+        "ID": 73.25, 
+        "IE": 82.52, 
+        "IL": 81.85, 
+        "IT": 71.75, 
+        "JP": 78.36, 
+        "KE": 56, 
+        "LI": 77.7, 
+        "LU": 69.64, 
+        "MX": 81, 
+        "NP": 0, 
+        "NL": 64.42, 
+        "AN": 65.75, 
+        "NZ": 67.33, 
+        "NO": 55.99, 
+        "PK": 4, 
+        "PH": 19.67, 
+        "PL": 59.99, 
+        "RU": 58.17, 
+        "GB": 0, 
+        "CS": 61.67, 
+        "SK": 74.09, 
+        "ZA": 78.94, 
+        "ES": 73.19, 
+        "SE": 77.55, 
+        "CH": 72.29, 
+        "TW": 85.47, 
+        "TR": 67.67, 
+        "UA": 16.8, 
+        "UK": 61.98, 
+        "US": 58.69 
+    }
     });
-});
+
+    
